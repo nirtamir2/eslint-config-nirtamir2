@@ -5,6 +5,9 @@ I should look at https://github.com/dustinspecker/awesome-eslint before I wrote 
 
 Maybe I should start with strict rules, and then debug performance and then remove the unwanted?
 
+## How to create your ESLint config
+https://eslint.org/docs/developer-guide/shareable-configs
+
 ## What do I want to achieve with those rules:
 - Prefer auto-fixable over non auto-fixable rules - to gain productivity
 - If TypeScript can handle it - you don't need that rule
