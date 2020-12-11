@@ -5,6 +5,10 @@ I should look at https://github.com/dustinspecker/awesome-eslint before I wrote 
 
 Maybe I should start with strict rules, and then debug performance and then remove the unwanted?
 
+## Productivity tools
+- https://github.com/kentcdodds/eslint-config-kentcdodds
+- https://github.com/kentcdodds/kcd-scripts
+
 ## How to create your ESLint config
 https://eslint.org/docs/developer-guide/shareable-configs
 
@@ -46,6 +50,7 @@ https://github.com/welldone-software/eslint-plugin-welldone/blob/master/rules/im
 - [ ] https://github.com/nickdeis/eslint-plugin-notice
 - [ ] https://github.com/mysticatea/eslint-plugin-node
 - [ ] https://github.com/mdx-js/eslint-mdx/tree/master/packages/eslint-plugin-mdx
+- [ ] https://github.com/testing-library/eslint-plugin-testing-library
 
 ## Investigate?
 - [ ] https://www.npmjs.com/package/eslint-plugin-ecmascript-compat
