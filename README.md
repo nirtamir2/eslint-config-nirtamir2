@@ -69,6 +69,10 @@ https://github.com/welldone-software/eslint-plugin-welldone/blob/master/rules/im
 - [ ] https://github.com/mthadley/eslint-plugin-sort-destructure-keys
 - [ ] https://github.com/standard/eslint-config-standard-with-typescript
 - [ ] https://github.com/mysticatea/eslint-plugin-eslint-comments
+- [ ] https://github.com/not-an-aardvark/eslint-plugin-eslint-plugin
+    - 'eslint-plugin/report-message-format'report-message-format': ['error', "^[A-Z`'{].*\\.$"],
+    - 'eslint-plugin/prefer-placeholders': 'error',
+    - 'eslint-plugin/consistent-output': 'error',
 
 ## Not ESLint, not sure
 - [ ] https://github.com/Quramy/typescript-eslint-language-service
