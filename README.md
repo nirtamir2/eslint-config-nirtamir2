@@ -26,6 +26,7 @@ https://github.com/Shopify/web-configs/blob/main/packages/eslint-plugin/docs/rul
 https://github.com/welldone-software/eslint-plugin-welldone/blob/master/rules/import-export-only.js + https://github.com/welldone-software/eslint-plugin-welldone/blob/master/rules/modules-engagement.js
 
 ## TODO:
+- [ ] https://github.com/joshuajaco/eslint-plugin-workspaces
 - [ ] https://github.com/leo-buneev/eslint-plugin-sort-keys-fix for i18n files
 - [ ] https://github.com/nirtamir2/eslint-plugin-sort-export-all
 - [ ] https://github.com/benmosher/eslint-plugin-import + `sort-import: ["error", { ignoreDeclarationSort: true }]`
