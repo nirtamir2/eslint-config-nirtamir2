@@ -94,3 +94,11 @@ https://github.com/welldone-software/eslint-plugin-welldone/blob/master/rules/im
 - [ ] @react-native-community
 - [ ] https://github.com/Intellicode/eslint-plugin-react-native
 - [ ] expo
+
+
+## Basic rules I like
+
+### ESLint default rules:
+```
+    "func-style": ["error", "declaration", { allowArrowFunctions: false }],
+```
