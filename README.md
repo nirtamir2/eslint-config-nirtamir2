@@ -66,6 +66,7 @@ https://github.com/welldone-software/eslint-plugin-welldone/blob/master/rules/im
 - [ ] https://github.com/iamturns/eslint-config-airbnb-typescript
 - [ ] https://github.com/Bkucera/eslint-plugin-json-format
 - [ ] https://github.com/RunDevelopment/eslint-plugin-clean-regex
+- [ ] https://github.com/remithomas/eslint-plugin-ban
 
 ## Not sure
 - [ ] https://github.com/infctr/eslint-plugin-typescript-sort-keys
