@@ -102,4 +102,5 @@ https://github.com/welldone-software/eslint-plugin-welldone/blob/master/rules/im
 ### ESLint default rules:
 ```
     "func-style": ["error", "declaration", { allowArrowFunctions: false }],
+    "no-implicit-coercion": ["error"]
 ```
