@@ -54,6 +54,7 @@ https://github.com/welldone-software/eslint-plugin-welldone/blob/master/rules/im
 - [ ] https://github.com/testing-library/eslint-plugin-testing-library
 - [ ] https://github.com/johvin/eslint-import-resolver-alias
 - [ ] https://github.com/wcandillon/eslint-plugin-ts-exports
+- [ ] https://github.com/facebook/flipper/blob/main/desktop/eslint-plugin-flipper/src/rules/noRelativeImportsAcrossPackages.ts
 
 ## Investigate?
 - [ ] https://www.npmjs.com/package/eslint-plugin-ecmascript-compat
