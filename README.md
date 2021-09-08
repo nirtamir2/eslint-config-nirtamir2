@@ -138,3 +138,7 @@ module.exports = {
   ],
 };
 ```
+
+## Inspiration
+
+- https://github.com/antfu/eslint-config
