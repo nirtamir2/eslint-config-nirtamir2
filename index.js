@@ -35,7 +35,6 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:import/react",
-    "prettier/react",
     "plugin:weblint-security/react",
     //#endregion react
 
