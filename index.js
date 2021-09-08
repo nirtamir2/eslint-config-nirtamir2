@@ -74,213 +74,217 @@ module.exports = {
       node: { extensions: [".js", ".mjs", ".ts", ".d.ts"] },
     },
   },
+  rules: {
+    //#region jest-async
+    "jest-async/expect-return": "error",
+    //#endregion jest-async
 
-  //#region jest-async
-  "jest-async/expect-return": "error",
-  //#endregion jest-async
+    //#region no-secrets
+    "no-secrets/no-secrets": 2,
+    //#endregion no-secrets
 
-  //#region no-secrets
-  "no-secrets/no-secrets": 2,
-  //#endregion no-secrets
+    //#region sort-keys-fix
+    "sort-keys-fix/sort-keys-fix": 0,
+    //#endregion sort-keys-fix
 
-  //#region sort-keys-fix
-  "sort-keys-fix/sort-keys-fix": 0,
-  //#endregion sort-keys-fix
+    //#region import
+    "import/no-namespace": 2,
+    "import/no-mutable-exports": 2,
+    "import/no-self-import": 2,
+    "import/no-cycle": 2,
+    "import/no-unused-modules": 2,
+    "import/no-anonymous-default-export": 2,
+    "import/no-default-export": 2,
+    "import/no-named-default": 2,
+    "import/no-commonjs": 2,
+    "import/no-amd": 2,
+    "import/first": 2,
+    "import/no-absolute-path": 2,
+    "import/no-nodejs-modules": 2,
+    "import/no-useless-path-segments": 2,
+    "import/unambiguous": 2,
+    "import/no-webpack-loader-syntax": 2,
+    "import/dynamic-import-chunkname": 2,
+    "import/exports-last": 2,
+    "import/no-dynamic-require": 2,
 
-  //#region import
-  "import/no-namespace": 2,
-  "import/no-mutable-exports": 2,
-  "import/no-self-import": 2,
-  "import/no-cycle": 2,
-  "import/no-unused-modules": 2,
-  "import/no-anonymous-default-export": 2,
-  "import/no-default-export": 2,
-  "import/no-named-default": 2,
-  "import/no-commonjs": 2,
-  "import/no-amd": 2,
-  "import/first": 2,
-  "import/no-absolute-path": 2,
-  "import/no-nodejs-modules": 2,
-  "import/no-useless-path-segments": 2,
-  "import/unambiguous": 2,
-  "import/no-webpack-loader-syntax": 2,
-  "import/dynamic-import-chunkname": 2,
-  "import/exports-last": 2,
-  "import/no-dynamic-require": 2,
+    // When using workspaces:
+    // "import/no-relative-parent-imports": 2,
+    // "import/no-internal-modules": 2, // maybe?
+    "import/no-extraneous-dependencies": 2,
 
-  // When using workspaces:
-  // "import/no-relative-parent-imports": 2,
-  // "import/no-internal-modules": 2, // maybe?
-  "import/no-extraneous-dependencies": 2,
+    // Off because it's slow
+    // "import/no-deprecated": 2,
 
-  // Off because it's slow
-  // "import/no-deprecated": 2,
+    // // Not sure
+    // extensions: [require("./rules/extensions")],
+    // "max-dependencies": require("./rules/max-dependencies"),
+    // "no-unassigned-import": require("./rules/no-unassigned-import"),
 
-  // // Not sure
-  // extensions: [require("./rules/extensions")],
-  // "max-dependencies": require("./rules/max-dependencies"),
-  // "no-unassigned-import": require("./rules/no-unassigned-import"),
+    //  NO
+    // "group-exports": require("./rules/group-exports"),
+    // "prefer-default-export": require("./rules/prefer-default-export"),
 
-  //  NO
-  // "group-exports": require("./rules/group-exports"),
-  // "prefer-default-export": require("./rules/prefer-default-export"),
+    //#endregion import
 
-  //#endregion import
+    //#region unicorn
+    /**
+     * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/9c3f180c3ce35b3e488c076a243bf5b935c108ef/docs/rules/no-null.md
+     * I use null to check for null / undefined with `variableName == null`
+     */
+    "unicorn/no-null": 0,
+    /**
+     * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/9c3f180c3ce35b3e488c076a243bf5b935c108ef/docs/rules/prevent-abbreviations.md
+     * I prefer variables with short scope to be called with short name like e instead of event
+     */
+    "unicorn/prevent-abbreviations": 0,
+    //#endregion unicorn
 
-  //#region unicorn
-  /**
-   * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/9c3f180c3ce35b3e488c076a243bf5b935c108ef/docs/rules/no-null.md
-   * I use null to check for null / undefined with `variableName == null`
-   */
-  "unicorn/no-null": 0,
-  /**
-   * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/9c3f180c3ce35b3e488c076a243bf5b935c108ef/docs/rules/prevent-abbreviations.md
-   * I prefer variables with short scope to be called with short name like e instead of event
-   */
-  "unicorn/prevent-abbreviations": 0,
-  //#endregion unicorn
+    //#region react
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
+    "react/jsx-sort-props": [
+      "error",
+      {
+        callbacksLast: true,
+        // "shorthandFirst": true,
+        // "shorthandLast": <boolean>,
+        // "ignoreCase": <boolean>,
+        noSortAlphabetically: false,
+        reservedFirst: true,
+      },
+    ],
+    "react/react-in-jsx-scope": 0,
+    "react/display-name": 0,
+    "react/prop-types": 0,
+    "react/jsx-pascal-case": 2,
+    "react/jsx-no-constructed-context-values": 2,
+    "react/jsx-no-useless-fragment": 2,
+    "react/jsx-handler-names": 2,
+    "react/jsx-no-duplicate-props": 2,
+    "react/jsx-curly-brace-presence": [
+      2,
+      { props: "never", children: "never" },
+    ],
+    // As of React 16.14 and 17
+    // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
+    "react/jsx-uses-react": 0,
 
-  //#region react
-  // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
-  "react/jsx-sort-props": [
-    "error",
-    {
-      callbacksLast: true,
-      // "shorthandFirst": true,
-      // "shorthandLast": <boolean>,
-      // "ignoreCase": <boolean>,
-      noSortAlphabetically: false,
-      reservedFirst: true,
-    },
-  ],
-  "react/react-in-jsx-scope": 0,
-  "react/display-name": 0,
-  "react/prop-types": 0,
-  "react/jsx-pascal-case": 2,
-  "react/jsx-no-constructed-context-values": 2,
-  "react/jsx-no-useless-fragment": 2,
-  "react/jsx-handler-names": 2,
-  "react/jsx-no-duplicate-props": 2,
-  "react/jsx-curly-brace-presence": [2, { props: "never", children: "never" }],
-  // As of React 16.14 and 17
-  // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint
-  "react/jsx-uses-react": 0,
+    //#endregion react
 
-  //#endregion react
+    //#region eslint
 
-  //#region eslint
+    // ignore eslint prettier that remove this rule, because I want to remove useless template literal
+    quotes: [2, "double", { allowTemplateLiterals: false }],
+    "no-implicit-coercion": ["error"],
+    "prefer-destructuring": "error",
+    "func-style": ["error", "declaration", { allowArrowFunctions: false }],
 
-  // ignore eslint prettier that remove this rule, because I want to remove useless template literal
-  quotes: [2, "double", { allowTemplateLiterals: false }],
-  "no-implicit-coercion": ["error"],
-  "prefer-destructuring": "error",
-  "func-style": ["error", "declaration", { allowArrowFunctions: false }],
+    // Based on https://github.com/antfu/eslint-config/blob/master/packages/basic/index.js
+    // Common
+    "no-param-reassign": "off",
+    "array-bracket-spacing": ["error", "never"],
+    "brace-style": ["error", "stroustrup", { allowSingleLine: true }],
+    "block-spacing": ["error", "always"],
+    camelcase: "off",
+    "comma-spacing": ["error", { before: false, after: true }],
+    "comma-style": ["error", "last"],
+    "comma-dangle": ["error", "always-multiline"],
+    "no-constant-condition": "warn",
+    "no-debugger": "error",
+    "no-console": ["error", { allow: ["warn", "error"] }],
+    "no-cond-assign": ["error", "always"],
+    "func-call-spacing": ["off", "never"],
+    "key-spacing": ["error", { beforeColon: false, afterColon: true }],
+    indent: [
+      "error",
+      2,
+      { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 },
+    ],
+    "no-restricted-syntax": [
+      "error",
+      "DebuggerStatement",
+      "ForInStatement",
+      "LabeledStatement",
+      "WithStatement",
+    ],
+    "object-curly-spacing": ["error", "always"],
+    "no-return-await": "off",
+    "space-before-function-paren": ["error", "never"],
 
-  // Based on https://github.com/antfu/eslint-config/blob/master/packages/basic/index.js
-  // Common
-  "no-param-reassign": "off",
-  "array-bracket-spacing": ["error", "never"],
-  "brace-style": ["error", "stroustrup", { allowSingleLine: true }],
-  "block-spacing": ["error", "always"],
-  camelcase: "off",
-  "comma-spacing": ["error", { before: false, after: true }],
-  "comma-style": ["error", "last"],
-  "comma-dangle": ["error", "always-multiline"],
-  "no-constant-condition": "warn",
-  "no-debugger": "error",
-  "no-console": ["error", { allow: ["warn", "error"] }],
-  "no-cond-assign": ["error", "always"],
-  "func-call-spacing": ["off", "never"],
-  "key-spacing": ["error", { beforeColon: false, afterColon: true }],
-  indent: [
-    "error",
-    2,
-    { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 },
-  ],
-  "no-restricted-syntax": [
-    "error",
-    "DebuggerStatement",
-    "ForInStatement",
-    "LabeledStatement",
-    "WithStatement",
-  ],
-  "object-curly-spacing": ["error", "always"],
-  "no-return-await": "off",
-  "space-before-function-paren": ["error", "never"],
+    // es6
+    "no-var": "error",
+    "prefer-const": [
+      "error",
+      {
+        destructuring: "any",
+        ignoreReadBeforeAssign: true,
+      },
+    ],
+    "prefer-arrow-callback": [
+      "error",
+      {
+        allowNamedFunctions: false,
+        allowUnboundThis: true,
+      },
+    ],
+    "object-shorthand": [
+      "error",
+      "always",
+      {
+        ignoreConstructors: false,
+        avoidQuotes: true,
+      },
+    ],
+    "prefer-rest-params": "error",
+    "prefer-spread": "error",
+    "prefer-template": "error",
+    "template-curly-spacing": "error",
+    "arrow-parens": ["error", "as-needed", { requireForBlockBody: true }],
+    "generator-star-spacing": "off",
 
-  // es6
-  "no-var": "error",
-  "prefer-const": [
-    "error",
-    {
-      destructuring: "any",
-      ignoreReadBeforeAssign: true,
-    },
-  ],
-  "prefer-arrow-callback": [
-    "error",
-    {
-      allowNamedFunctions: false,
-      allowUnboundThis: true,
-    },
-  ],
-  "object-shorthand": [
-    "error",
-    "always",
-    {
-      ignoreConstructors: false,
-      avoidQuotes: true,
-    },
-  ],
-  "prefer-rest-params": "error",
-  "prefer-spread": "error",
-  "prefer-template": "error",
-  "template-curly-spacing": "error",
-  "arrow-parens": ["error", "as-needed", { requireForBlockBody: true }],
-  "generator-star-spacing": "off",
+    // best-practice
+    "array-callback-return": "error",
+    "block-scoped-var": "error",
+    "consistent-return": "off",
+    complexity: ["off", 11],
+    eqeqeq: ["error", "always", { null: "ignore" }],
+    "no-alert": "warn",
+    "no-case-declarations": "error",
+    "no-multi-spaces": "error",
+    "no-multi-str": "error",
+    "no-with": "error",
+    "no-void": "error",
+    "no-useless-escape": "off",
+    "vars-on-top": "error",
+    "require-await": "off",
+    "no-return-assign": "off",
+    "operator-linebreak": ["error", "before"],
 
-  // best-practice
-  "array-callback-return": "error",
-  "block-scoped-var": "error",
-  "consistent-return": "off",
-  complexity: ["off", 11],
-  eqeqeq: ["error", "always", { null: "ignore" }],
-  "no-alert": "warn",
-  "no-case-declarations": "error",
-  "no-multi-spaces": "error",
-  "no-multi-str": "error",
-  "no-with": "error",
-  "no-void": "error",
-  "no-useless-escape": "off",
-  "vars-on-top": "error",
-  "require-await": "off",
-  "no-return-assign": "off",
-  "operator-linebreak": ["error", "before"],
+    //#endregion eslint
 
-  //#endregion eslint
+    //#region etc
+    "etc/no-commented-out-code": 2,
+    "etc/no-const-enum": 2,
+    "etc/no-misused-generics": 2,
+    "etc/prefer-interface": 2,
+    "etc/prefer-less-than": 2,
+    "etc/throw-error": 2,
+    "etc/underscore-internal": 2,
+    //#endregion etc
 
-  //#region etc
-  "etc/no-commented-out-code": 2,
-  "etc/no-const-enum": 2,
-  "etc/no-misused-generics": 2,
-  "etc/prefer-interface": 2,
-  "etc/prefer-less-than": 2,
-  "etc/throw-error": 2,
-  "etc/underscore-internal": 2,
-  //#endregion etc
-
-  //#region @typescript-eslint
-  "@typescript-eslint/no-unnecessary-type-arguments": "error",
-  "@typescript-eslint/no-unnecessary-type-constraint": "error",
-  "@typescript-eslint/consistent-type-imports": "error",
-  "@typescript-eslint/prefer-literal-enum-member": "error",
-  "@typescript-eslint/ban-ts-comment": [
-    "error",
-    {
-      "ts-ignore": "allow-with-description",
-    },
-  ],
-  //#endregion @typescript-eslint
+    //#region @typescript-eslint
+    "@typescript-eslint/no-unnecessary-type-arguments": "error",
+    "@typescript-eslint/no-unnecessary-type-constraint": "error",
+    "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/prefer-literal-enum-member": "error",
+    "@typescript-eslint/ban-ts-comment": [
+      "error",
+      {
+        "ts-ignore": "allow-with-description",
+      },
+    ],
+    //#endregion @typescript-eslint
+  },
 };
 
 /**
