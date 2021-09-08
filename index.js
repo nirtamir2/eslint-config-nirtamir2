@@ -60,9 +60,15 @@ module.exports = {
     // "jest-async",
     "sort-keys-fix" /* not in use but can be */,
   ],
+  env: {
+    es6: true,
+    browser: true,
+    jest: true,
+    node: true,
+  },
   settings: {
     react: {
-      version: "17.0",
+      version: "detect",
     },
     "import/resolver": {
       node: { extensions: [".js", ".mjs", ".ts", ".d.ts"] },
