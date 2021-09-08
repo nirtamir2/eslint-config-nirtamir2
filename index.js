@@ -24,6 +24,8 @@ module.exports = {
     "plugin:no-unsanitized/DOM",
     "plugin:security/recommended",
     "plugin:weblint-security/recommended",
+    "plugin:weblint-security/react",
+    "plugin:weblint-security/nodejs",
 
     "plugin:jest/recommended",
     "plugin:jest/style",
@@ -34,8 +36,6 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:import/react",
-    "plugin:weblint-security/react",
     //#endregion react
 
     //#region nextjs
@@ -44,13 +44,12 @@ module.exports = {
     "next/core-web-vitals",
     //#endregion nextjs
 
-    "plugin:node/recommended",
-    "plugin:weblint-security/nodejs",
-
     "plugin:markdown/recommended",
 
     "plugin:import/recommended",
     "plugin:import/typescript",
+    "plugin:import/react",
+
     "prettier",
   ],
   plugins: [
@@ -83,11 +82,6 @@ module.exports = {
     },
   },
   rules: {
-    "node/no-unsupported-features/es-syntax": [
-      "error",
-      { ignores: ["modules"] },
-    ],
-
     //#region jest-async
     "jest-async/expect-return": "error",
     //#endregion jest-async
@@ -107,8 +101,8 @@ module.exports = {
     "import/no-self-import": 2,
     "import/no-cycle": 2,
     "import/no-unused-modules": 2,
-    "import/no-anonymous-default-export": 2,
-    "import/no-default-export": 2,
+    // "import/no-anonymous-default-export": 2,
+    // "import/no-default-export": 2,
     "import/no-named-default": 2,
     "import/no-commonjs": 2,
     "import/no-amd": 2,
@@ -116,7 +110,6 @@ module.exports = {
     "import/no-absolute-path": 2,
     "import/no-nodejs-modules": 2,
     "import/no-useless-path-segments": 2,
-    "import/unambiguous": 2,
     "import/no-webpack-loader-syntax": 2,
     "import/dynamic-import-chunkname": 2,
     "import/exports-last": 2,
@@ -142,6 +135,7 @@ module.exports = {
     //#endregion import
 
     //#region unicorn
+    "unicorn/filename-case": 0,
     /**
      * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/9c3f180c3ce35b3e488c076a243bf5b935c108ef/docs/rules/no-null.md
      * I use null to check for null / undefined with `variableName == null`
@@ -277,7 +271,7 @@ module.exports = {
     //#endregion eslint
 
     //#region etc
-    "etc/no-commented-out-code": 2,
+    // "etc/no-commented-out-code": 2,
     "etc/no-const-enum": 2,
     "etc/no-misused-generics": 2,
     "etc/prefer-interface": 2,
@@ -299,18 +293,9 @@ module.exports = {
     ],
     //#endregion @typescript-eslint
   },
-  overrides: [
-    {
-      // Next.js requires default exports in pages
-      files: ["pages/**"],
-      rules: {
-        "import/no-default-export": 0,
-      },
-    },
-  ],
 };
 
 /**
- * Install eslint pacakges
- * yarn add -D @next/eslint-plugin-next @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-next eslint-config-prettier eslint-plugin-array-func eslint-plugin-compat eslint-plugin-cypress eslint-plugin-eslint-comments eslint-plugin-etc eslint-plugin-import  eslint-plugin-jest eslint-plugin-jest-async eslint-plugin-jsx-a11y eslint-plugin-markdown eslint-plugin-no-secrets eslint-plugin-no-unsanitized eslint-plugin-no-use-extend-native eslint-plugin-node eslint-plugin-optimize-regex eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-regexp eslint-plugin-security eslint-plugin-sonarjs eslint-plugin-sort-keys-fix eslint-plugin-testing-library eslint-plugin-unicorn eslint-plugin-weblint-security
+ * Install eslint packages
+ * yarn add -D @next/eslint-plugin-next @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-next eslint-config-prettier eslint-plugin-array-func eslint-plugin-compat eslint-plugin-cypress eslint-plugin-eslint-comments eslint-plugin-etc eslint-plugin-import  eslint-plugin-jest eslint-plugin-jest-async eslint-plugin-jsx-a11y eslint-plugin-markdown eslint-plugin-no-secrets eslint-plugin-no-unsanitized eslint-plugin-no-use-extend-native eslint-plugin-optimize-regex eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-regexp eslint-plugin-security eslint-plugin-sonarjs eslint-plugin-sort-keys-fix eslint-plugin-testing-library eslint-plugin-unicorn eslint-plugin-weblint-security
  */
