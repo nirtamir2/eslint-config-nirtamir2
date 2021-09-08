@@ -59,6 +59,13 @@ module.exports = {
     "no-secrets",
     "jest-async",
     "sort-keys-fix" /* not in use but can be */,
+    "react",
+    "import",
+    "unicorn",
+    "react",
+    "eslint",
+    "etc",
+    "@typescript-eslint",
   ],
   env: {
     es6: true,
