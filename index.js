@@ -53,12 +53,21 @@ module.exports = {
     "plugin:import/typescript",
     "prettier",
   ],
-  parser: "@typescript-eslint/parser",
   plugins: [
     "no-secrets",
     "jest-async",
     "sort-keys-fix" /* not in use but can be */,
   ],
+  parser: "@typescript-eslint/parser",
+  parserOptions: {
+    ecmaVersion: 2020,
+    project: ["./tsconfig.json"],
+    sourceType: "module",
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+
   env: {
     es6: true,
     browser: true,
