@@ -83,6 +83,11 @@ module.exports = {
     },
   },
   rules: {
+    "node/no-unsupported-features/es-syntax": [
+      "error",
+      { ignores: ["modules"] },
+    ],
+
     //#region jest-async
     "jest-async/expect-return": "error",
     //#endregion jest-async
@@ -96,6 +101,7 @@ module.exports = {
     //#endregion sort-keys-fix
 
     //#region import
+
     "import/no-namespace": 2,
     "import/no-mutable-exports": 2,
     "import/no-self-import": 2,
@@ -185,7 +191,7 @@ module.exports = {
     quotes: [2, "double", { allowTemplateLiterals: false }],
     "no-implicit-coercion": ["error"],
     "prefer-destructuring": "error",
-    "func-style": ["error", "declaration", { allowArrowFunctions: false }],
+    "func-style": ["error", "declaration", { allowArrowFunctions: true }],
 
     // Based on https://github.com/antfu/eslint-config/blob/master/packages/basic/index.js
     // Common
@@ -293,8 +299,18 @@ module.exports = {
     ],
     //#endregion @typescript-eslint
   },
+  overrides: [
+    {
+      // Next.js requires default exports in pages
+      files: ["pages/**"],
+      rules: {
+        "import/no-default-export": 0,
+      },
+    },
+  ],
 };
 
 /**
-  yarn add eslint-plugin-no-secrets eslint-plugin-jest-async eslint-plugin-sort-keys-fix @typescript-eslint/parser @typescript-eslint/eslint-plugin  eslint-plugin-etc eslint-plugin-sonarjs eslint-plugin-compat eslint-plugin-unicorn eslint-plugin-eslint-comments eslint-plugin-array-func eslint-plugin-promise eslint-plugin-optimize-regex eslint-plugin-regexp eslint-plugin-no-use-extend-native eslint-plugin-no-unsanitized eslint-plugin-security eslint-plugin-weblint-security eslint-plugin-jest eslint-plugin-cypress eslint-plugin-testing-library eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-import @next/eslint-plugin-next eslint-config-next eslint-plugin-node eslint-plugin-markdown eslint-plugin-import
+ * Install eslint pacakges
+ * yarn add -D @next/eslint-plugin-next @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-next eslint-config-prettier eslint-plugin-array-func eslint-plugin-compat eslint-plugin-cypress eslint-plugin-eslint-comments eslint-plugin-etc eslint-plugin-import  eslint-plugin-jest eslint-plugin-jest-async eslint-plugin-jsx-a11y eslint-plugin-markdown eslint-plugin-no-secrets eslint-plugin-no-unsanitized eslint-plugin-no-use-extend-native eslint-plugin-node eslint-plugin-optimize-regex eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-regexp eslint-plugin-security eslint-plugin-sonarjs eslint-plugin-sort-keys-fix eslint-plugin-testing-library eslint-plugin-unicorn eslint-plugin-weblint-security
  */
