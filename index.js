@@ -57,7 +57,7 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   plugins: [
     "no-secrets",
-    // "jest-async",
+    "jest-async",
     "sort-keys-fix" /* not in use but can be */,
   ],
   env: {
