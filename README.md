@@ -1,4 +1,5 @@
 # eslint-config-nirtamir2
+
 The journey to create my own ESLint config
 
 I should look at https://github.com/dustinspecker/awesome-eslint before I wrote it
@@ -6,13 +7,16 @@ I should look at https://github.com/dustinspecker/awesome-eslint before I wrote 
 Maybe I should start with strict rules, and then debug performance and then remove the unwanted?
 
 ## Productivity tools
+
 - https://github.com/kentcdodds/eslint-config-kentcdodds
 - https://github.com/kentcdodds/kcd-scripts
 
 ## How to create your ESLint config
+
 https://eslint.org/docs/developer-guide/shareable-configs
 
 ## What do I want to achieve with those rules:
+
 - Prefer auto-fixable over non auto-fixable rules - to gain productivity
 - If TypeScript can handle it - you don't need that rule
 - If Prettier can handle it - you don't need that rule (you should run pretty-quick or similar with husky and lint-staged)
@@ -22,10 +26,12 @@ https://eslint.org/docs/developer-guide/shareable-configs
 - If it's anoyying and not adding a value - don't use it
 
 ## Liked:
+
 https://github.com/Shopify/web-configs/blob/main/packages/eslint-plugin/docs/rules/prefer-early-return.md
 https://github.com/welldone-software/eslint-plugin-welldone/blob/master/rules/import-export-only.js + https://github.com/welldone-software/eslint-plugin-welldone/blob/master/rules/modules-engagement.js
 
 ## TODO:
+
 - [ ] https://github.com/joshuajaco/eslint-plugin-workspaces
 - [ ] https://github.com/leo-buneev/eslint-plugin-sort-keys-fix for i18n files
 - [ ] https://github.com/nirtamir2/eslint-plugin-sort-export-all
@@ -57,6 +63,7 @@ https://github.com/welldone-software/eslint-plugin-welldone/blob/master/rules/im
 - [ ] https://github.com/facebook/flipper/blob/main/desktop/eslint-plugin-flipper/src/rules/noRelativeImportsAcrossPackages.ts
 
 ## Investigate?
+
 - [ ] https://www.npmjs.com/package/eslint-plugin-ecmascript-compat
 - [ ] https://github.com/HKalbasi/eslint-plugin-toplevel
 - [ ] https://github.com/kunalgolani/eslint-config/tree/master/packages/recommended#readme
@@ -70,19 +77,22 @@ https://github.com/welldone-software/eslint-plugin-welldone/blob/master/rules/im
 - [ ] https://github.com/remithomas/eslint-plugin-ban
 
 ## Not sure
+
 - [ ] https://github.com/infctr/eslint-plugin-typescript-sort-keys
 - [ ] https://github.com/mthadley/eslint-plugin-sort-destructure-keys
 - [ ] https://github.com/standard/eslint-config-standard-with-typescript
 - [ ] https://github.com/mysticatea/eslint-plugin-eslint-comments
 - [ ] https://github.com/not-an-aardvark/eslint-plugin-eslint-plugin
-    - 'eslint-plugin/report-message-format'report-message-format': ['error', "^[A-Z`'{].*\\.$"],
-    - 'eslint-plugin/prefer-placeholders': 'error',
-    - 'eslint-plugin/consistent-output': 'error',
+  - 'eslint-plugin/report-message-format'report-message-format': ['error', "^[A-Z`'{].\*\\.$"],
+  - 'eslint-plugin/prefer-placeholders': 'error',
+  - 'eslint-plugin/consistent-output': 'error',
 
 ## Not ESLint, not sure
+
 - [ ] https://github.com/Quramy/typescript-eslint-language-service
 
-## Not ESLint 
+## Not ESLint
+
 - [ ] https://github.com/anandthakker/doiuse
 
 ## NextJs
@@ -90,18 +100,41 @@ https://github.com/welldone-software/eslint-plugin-welldone/blob/master/rules/im
 ## Emotion
 
 ## Tailwind
+
 - [ ] https://github.com/Idered/eslint-plugin-tailwind
 
 ## React Native
+
 - [ ] @react-native-community
 - [ ] https://github.com/Intellicode/eslint-plugin-react-native
 - [ ] expo
 
-
 ## Basic rules I like
 
 ### ESLint default rules:
+
 ```
     "func-style": ["error", "declaration", { allowArrowFunctions: false }],
     "no-implicit-coercion": ["error"]
+```
+
+## Usage:
+
+```bash
+yarn add eslint-config-nirtamir2
+```
+
+In `.eslintrc`:
+
+```js
+module.exports = {
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  extends: [
+    "nirtamir2/reccommended",
+    "nirtamir2/react",
+    "nirtamir2/typescript",
+    "nirtamir2/prettier",
+  ],
+};
 ```
