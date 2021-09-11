@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-nirtamir2",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "ESLint config for react projects with TypeScript",
   "keywords": [
     "eslint",
