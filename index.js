@@ -74,6 +74,8 @@ module.exports = {
     node: true,
   },
   settings: {
+    // https://nextjs.org/docs/basic-features/supported-browsers-features for compat/compat
+    polyfills: ["fetch", "URL", "Object.assign"],
     react: {
       version: "detect",
     },
@@ -135,6 +137,7 @@ module.exports = {
     //#endregion import
 
     //#region unicorn
+    "unicorn/numeric-separators-style": 0,
     "unicorn/filename-case": 0,
     /**
      * @see https://github.com/sindresorhus/eslint-plugin-unicorn/blob/9c3f180c3ce35b3e488c076a243bf5b935c108ef/docs/rules/no-null.md
@@ -190,24 +193,11 @@ module.exports = {
     // Based on https://github.com/antfu/eslint-config/blob/master/packages/basic/index.js
     // Common
     "no-param-reassign": "off",
-    "array-bracket-spacing": ["error", "never"],
-    "brace-style": ["error", "stroustrup", { allowSingleLine: true }],
-    "block-spacing": ["error", "always"],
     camelcase: "off",
-    "comma-spacing": ["error", { before: false, after: true }],
-    "comma-style": ["error", "last"],
-    "comma-dangle": ["error", "always-multiline"],
     "no-constant-condition": "warn",
     "no-debugger": "error",
     "no-console": ["error", { allow: ["warn", "error"] }],
     "no-cond-assign": ["error", "always"],
-    "func-call-spacing": ["off", "never"],
-    "key-spacing": ["error", { beforeColon: false, afterColon: true }],
-    indent: [
-      "error",
-      2,
-      { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 },
-    ],
     "no-restricted-syntax": [
       "error",
       "DebuggerStatement",
@@ -217,7 +207,6 @@ module.exports = {
     ],
     "object-curly-spacing": ["error", "always"],
     "no-return-await": "off",
-    "space-before-function-paren": ["error", "never"],
 
     // es6
     "no-var": "error",
@@ -246,8 +235,6 @@ module.exports = {
     "prefer-rest-params": "error",
     "prefer-spread": "error",
     "prefer-template": "error",
-    "template-curly-spacing": "error",
-    "arrow-parens": ["error", "as-needed", { requireForBlockBody: true }],
     "generator-star-spacing": "off",
 
     // best-practice
@@ -266,7 +253,6 @@ module.exports = {
     "vars-on-top": "error",
     "require-await": "off",
     "no-return-assign": "off",
-    "operator-linebreak": ["error", "before"],
 
     //#endregion eslint
 
