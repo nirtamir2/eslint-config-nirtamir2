@@ -110,6 +110,10 @@ https://github.com/welldone-software/eslint-plugin-welldone/blob/master/rules/im
 - [ ] https://github.com/Intellicode/eslint-plugin-react-native
 - [ ] expo
 
+
+## Codegen
+- [ ] https://github.com/mmkal/ts/tree/main/packages/eslint-plugin-codegen - add a comment regions to your code to force eslint fix to write code (for example generate barrel `export * from "./somewhere"` in index files)
+
 ## Usage:
 
 ```bash
