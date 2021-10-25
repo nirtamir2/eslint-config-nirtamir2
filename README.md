@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-yarn add -D eslint-config-nirtamir2
+yarn add -D eslint eslint-config-nirtamir2
 ```
 
 Edit your `package.json` file

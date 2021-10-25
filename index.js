@@ -159,17 +159,23 @@ module.exports = {
       "error",
       {
         callbacksLast: true,
-        // "shorthandFirst": true,
+        shorthandFirst: true,
         // "shorthandLast": <boolean>,
         // "ignoreCase": <boolean>,
-        noSortAlphabetically: false,
+        noSortAlphabetically: true,
         reservedFirst: true,
       },
     ],
     "react/react-in-jsx-scope": 0,
     "react/display-name": 0,
     "react/prop-types": 0,
-    "react/jsx-pascal-case": 2,
+    "react/jsx-pascal-case": [
+      2,
+      {
+        allowLeadingUnderscore: true,
+        allowNamespace: true,
+      },
+    ],
     "react/jsx-no-constructed-context-values": 2,
     "react/jsx-no-useless-fragment": 2,
     "react/jsx-handler-names": 2,
@@ -207,7 +213,6 @@ module.exports = {
       "LabeledStatement",
       "WithStatement",
     ],
-    "object-curly-spacing": ["error", "always"],
     "no-return-await": "off",
 
     // es6
@@ -250,7 +255,6 @@ module.exports = {
     "no-multi-spaces": "error",
     "no-multi-str": "error",
     "no-with": "error",
-    "no-void": "error",
     "no-useless-escape": "off",
     "vars-on-top": "error",
     "require-await": "off",
