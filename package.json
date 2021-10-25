@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-nirtamir2",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "ESLint config for react projects with TypeScript",
   "keywords": [
     "eslint",
@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@next/eslint-plugin-next": "^11.1.2",
+    "@rushstack/eslint-patch": "^1.0.8",
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "@typescript-eslint/parser": "^5.2.0",
     "eslint": "^8.1.0",
