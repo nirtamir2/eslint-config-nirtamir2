@@ -96,6 +96,7 @@ https://github.com/welldone-software/eslint-plugin-welldone/blob/master/rules/im
 - [ ] https://github.com/anandthakker/doiuse
 
 ## NextJs
+
 - [ ] https://github.com/vercel/next.js/tree/canary/packages/eslint-config-next
 
 ## Emotion
@@ -110,8 +111,8 @@ https://github.com/welldone-software/eslint-plugin-welldone/blob/master/rules/im
 - [ ] https://github.com/Intellicode/eslint-plugin-react-native
 - [ ] expo
 
-
 ## Codegen
+
 - [ ] https://github.com/mmkal/ts/tree/main/packages/eslint-plugin-codegen - add a comment regions to your code to force eslint fix to write code (for example generate barrel `export * from "./somewhere"` in index files)
 
 ## Usage:
@@ -140,13 +141,16 @@ module.exports = {
 - https://github.com/antfu/eslint-config
 
 ## Unknown plugins
+
 - https://github.com/microsoft/rushstack/tree/master/stack/eslint-plugin-packlets
 
-
 ## Tools
+
 - https://github.com/microsoft/rushstack/tree/master/stack/eslint-patch - allow users of your eslint-config not installing eslint-plugins you depend on
 
   ### Auto config based on dependencies
+
   - https://github.com/davidjbradshaw/eslint-config-auto
   - https://github.com/davidjbradshaw/eslint-config-adjunct
 
+https://nextjs.org/docs/basic-features/eslint#eslint-plugin
