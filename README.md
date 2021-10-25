@@ -83,3 +83,9 @@ Edit your `package.json` file
   }
 }
 ```
+
+## Release / Publish
+
+```bash
+yarn publish
+```
