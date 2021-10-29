@@ -24,12 +24,19 @@ Edit your `package.json` file
 }
 ```
 
-Edit your `.eslintrc` file
+Edit your `.eslintrc` file (choose the configs you want)
 
 ```js
 module.exports = {
   root: true,
-  extends: ["nirtamir2"],
+  extends: [
+    "nirtamir2/recommended",
+    "nirtamir2/react",
+    "nirtamir2/typescript",
+    "nirtamir2/security",
+    "nirtamir2/compat",
+    "nirtamir2/jest",
+  ],
 };
 ```
 

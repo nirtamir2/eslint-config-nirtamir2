@@ -32,6 +32,7 @@ https://github.com/welldone-software/eslint-plugin-welldone/blob/master/rules/im
 
 ## TODO:
 
+- [ ] add adiera "adeira/no-duplicate-import-type-import": 2, rule only
 - [ ] https://github.com/joshuajaco/eslint-plugin-workspaces
 - [ ] https://github.com/leo-buneev/eslint-plugin-sort-keys-fix for i18n files
 - [ ] https://github.com/nirtamir2/eslint-plugin-sort-export-all
