@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-nirtamir2",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "ESLint config for react projects with TypeScript",
   "keywords": [
     "eslint",
@@ -13,8 +13,8 @@
     "index.js"
   ],
   "scripts": {
-    "lint": "echo 'run typecript'",
     "format": "prettier --write **/*.{js,ts,md}",
+    "lint": "echo 'run typecript'",
     "prepare": "husky install"
   },
   "lint-staged": {
@@ -65,5 +65,8 @@
     "prettier-plugin-packagejson": "^2.2.13",
     "semantic-release": "^18.0.0",
     "semantic-release-cli": "^5.4.4"
+  },
+  "peerDependencies": {
+    "eslint": "^8.1.0"
   }
 }
