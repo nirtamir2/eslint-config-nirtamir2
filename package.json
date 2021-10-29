@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-nirtamir2",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "ESLint config for react projects with TypeScript",
   "keywords": [
     "eslint",
@@ -10,7 +10,12 @@
   "author": "Nir Tamir",
   "main": "index.js",
   "files": [
-    "index.js"
+    "compat.js",
+    "jest.js",
+    "react.js",
+    "typescript.js",
+    "security.js",
+    "recommended.js"
   ],
   "scripts": {
     "format": "prettier --write **/*.{js,ts,md}",
