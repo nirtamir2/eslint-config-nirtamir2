@@ -12,6 +12,7 @@ module.exports = {
     "plugin:regexp/recommended",
     "plugin:no-use-extend-native/recommended",
     "plugin:markdown/recommended",
+    "plugin:jsdoc/recommended",
     "plugin:import/recommended",
     "prettier",
   ],

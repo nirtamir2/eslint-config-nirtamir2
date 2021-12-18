@@ -8,6 +8,7 @@ module.exports = {
     "plugin:import/typescript",
     "prettier",
   ],
+  plugins: ["tsdoc"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 2020,
@@ -19,6 +20,10 @@ module.exports = {
   },
 
   rules: {
+    //#region tsdoc
+    "tsdoc/syntax": "warn",
+    //#endregion
+
     //#region etc - off too strict rules
     "etc/no-commented-out-code": "off", //too strict?
     "etc/no-deprecated": "off",
