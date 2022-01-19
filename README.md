@@ -11,7 +11,7 @@ Edit your `package.json` file
 ```json
 {
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=16.0.0"
   },
   "browserslist": {
     "production": [">0.2%", "not dead", "not op_mini all"],
@@ -81,7 +81,7 @@ Edit your `package.json` file
 {
   "scripts": {
     "prepare": "husky install",
-    "lint": "next lint",
+    "lint": "eslint --fix \"**/*.{ts,tsx,js,jsx,json}\"",
     "type-check": "tsc --pretty --noEmit"
   },
   "lint-staged": {

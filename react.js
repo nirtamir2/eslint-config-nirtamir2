@@ -7,11 +7,7 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:import/react",
     "plugin:jsx-a11y/recommended",
-
-    //#region nextjs
-    "next",
-    "next/core-web-vitals",
-    //#endregion nextjs
+    "plugin:@next/core-web-vitals"
   ],
   settings: {
     react: {

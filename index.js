@@ -41,9 +41,10 @@ module.exports = {
     //#endregion react
 
     //#region nextjs
-    "plugin:@next/next/recommended",
-    "next",
-    "next/core-web-vitals",
+    // "plugin:@next/next/recommended",
+    "plugin:@next/next/core-web-vitals",
+    // "next",
+    // "next/core-web-vitals",
     //#endregion nextjs
 
     "plugin:markdown/recommended",
