@@ -40,25 +40,47 @@ module.exports = {
 };
 ```
 
+#### Next.js
+```bash
+yarn add -D @next/core-web-vitals
+```
+add `"plugin:@next/core-web-vitals"` or copy rules from https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/index.js +https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/core-web-vitals.js
+
 ## Prettier
 
 ```bash
 yarn add -D prettier prettier-plugin-packagejson @trivago/prettier-plugin-sort-imports
 ```
 
-Edit your `.prettierrc` file
+Edit your `.prettierrc.js` file
 
-```json
-{
-  "overrides": [
+```js
+module.exports = {
+  plugins: [
+    require.resolve("@trivago/prettier-plugin-sort-imports"),
+    require.resolve("prettier-plugin-packagejson"),
+  ],
+  // @see https://github.com/trivago/prettier-plugin-sort-imports
+  importOrder: [
+    "^react$",
+    "<THIRD_PARTY_MODULES>",
+    // Internal modules
+    "^@core/(.*)$",
+    "^@server/(.*)$",
+    "^@ui/(.*)$",
+    "^@*/(.*)$",
+    // Relative imports
+    "^[./]",
+  ],
+  overrides: [
     {
-      "files": "*.svg",
-      "options": {
-        "parser": "html"
-      }
-    }
-  ]
-}
+      files: "*.svg",
+      options: {
+        parser: "html",
+      },
+    },
+  ],
+};
 ```
 
 ## Husky

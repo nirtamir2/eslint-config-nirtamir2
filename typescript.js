@@ -1,6 +1,7 @@
 require("@rushstack/eslint-patch/modern-module-resolution");
+const { defineConfig } = require("eslint-define-config");
 
-module.exports = {
+module.exports = defineConfig({
   extends: [
     "plugin:@typescript-eslint/recommended", // should not add new rules
     "plugin:@typescript-eslint/recommended-requiring-type-checking", // should not add new rules
@@ -63,26 +64,26 @@ module.exports = {
                user_id: userId,
              });
        And we fail in this lint
-      
+
        Another example is something like
        Function name `AuthProvider` must match one of the following formats: camelCase
-      
+
        {
          selector: "default",
          format: ["camelCase"],
          leadingUnderscore: "allow",
          trailingUnderscore: "allow",
        },
-      
+
        {
          selector: "variable",
          format: ["camelCase", "UPPER_CASE"],
          leadingUnderscore: "allow",
          trailingUnderscore: "allow",
        },
-       
-       Also for 3rd party override like in global.d.ts 
-       
+
+       Also for 3rd party override like in global.d.ts
+
       declare global {
         namespace NodeJS {
           interface ProcessEnv {
@@ -91,11 +92,11 @@ module.exports = {
           }
         }
       }
-      
+
       This will complain that interface ProcessEnv not starting with I
-      
-      Or auto-generated TypeScript tool that gets an object json and return it's types 
-      
+
+      Or auto-generated TypeScript tool that gets an object json and return it's types
+
       */
       {
         selector: "typeLike",
@@ -278,4 +279,4 @@ module.exports = {
     "@typescript-eslint/unified-signatures": "error",
     //#endregion
   },
-};
+});

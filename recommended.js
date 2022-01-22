@@ -1,6 +1,7 @@
 require("@rushstack/eslint-patch/modern-module-resolution");
+const { defineConfig } = require("eslint-define-config");
 
-module.exports = {
+module.exports = defineConfig({
   extends: [
     "eslint:recommended",
     "plugin:sonarjs/recommended",
@@ -12,7 +13,6 @@ module.exports = {
     "plugin:regexp/recommended",
     "plugin:no-use-extend-native/recommended",
     "plugin:markdown/recommended",
-    "plugin:jsdoc/recommended",
     "plugin:import/recommended",
     "prettier",
   ],
@@ -33,7 +33,7 @@ module.exports = {
     "import/no-self-import": 2,
     "import/no-cycle": 2,
     "import/no-unused-modules": 2,
-    // "import/no-anonymous-default-export": 2,
+    "import/no-anonymous-default-export": 2,
     // "import/no-default-export": 2,
     "import/no-named-default": 2,
     "import/no-commonjs": 2,
@@ -149,4 +149,10 @@ module.exports = {
     "no-return-assign": "off",
     //#endregion eslint
   },
-};
+  overrides: [
+    {
+      files: ["**.js"],
+      extends: ["plugin:jsdoc/recommended"],
+    },
+  ],
+});

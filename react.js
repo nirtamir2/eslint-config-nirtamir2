@@ -1,13 +1,13 @@
 require("@rushstack/eslint-patch/modern-module-resolution");
+const { defineConfig } = require("eslint-define-config");
 
-module.exports = {
+module.exports = defineConfig({
   extends: [
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
     "plugin:import/react",
     "plugin:jsx-a11y/recommended",
-    "plugin:@next/core-web-vitals"
   ],
   settings: {
     react: {
@@ -52,5 +52,22 @@ module.exports = {
     // "react/jsx-uses-react": 0,
 
     //#endregion react
+
+    // @see https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/index.js
+    //#region jsx-a11y from nextjs eslint config
+    "jsx-a11y/alt-text": [
+      "warn",
+      {
+        elements: ["img"],
+        img: ["Image"],
+      },
+    ],
+    "jsx-a11y/aria-props": "warn",
+    "jsx-a11y/aria-proptypes": "warn",
+    "jsx-a11y/aria-unsupported-elements": "warn",
+    "jsx-a11y/role-has-required-aria-props": "warn",
+    "jsx-a11y/role-supports-aria-props": "warn",
+
+    //#endregion jsx-a11y from nextjs eslint config
   },
-};
+});
