@@ -1,7 +1,6 @@
 require("@rushstack/eslint-patch/modern-module-resolution");
-const { defineConfig } = require("eslint-define-config");
 
-module.exports = defineConfig({
+module.exports = {
   extends: [
     "plugin:@typescript-eslint/recommended", // should not add new rules
     "plugin:@typescript-eslint/recommended-requiring-type-checking", // should not add new rules
@@ -279,4 +278,4 @@ module.exports = defineConfig({
     "@typescript-eslint/unified-signatures": "error",
     //#endregion
   },
-});
+};

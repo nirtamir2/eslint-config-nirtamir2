@@ -1,7 +1,6 @@
 require("@rushstack/eslint-patch/modern-module-resolution");
-const { defineConfig } = require("eslint-define-config");
 
-module.exports = defineConfig({
+module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:sonarjs/recommended",
@@ -155,4 +154,4 @@ module.exports = defineConfig({
       extends: ["plugin:jsdoc/recommended"],
     },
   ],
-});
+};

@@ -1,7 +1,6 @@
 require("@rushstack/eslint-patch/modern-module-resolution");
-const { defineConfig } = require("eslint-define-config");
 
-module.exports = defineConfig({
+module.exports = {
   extends: [
     /**
      * Notice - for compat need to config also the env and browserlist
@@ -13,4 +12,4 @@ module.exports = defineConfig({
     // https://nextjs.org/docs/basic-features/supported-browsers-features for compat/compat
     polyfills: ["fetch", "URL", "Object.assign"],
   },
-});
+};

@@ -1,7 +1,6 @@
 require("@rushstack/eslint-patch/modern-module-resolution");
-const { defineConfig } = require("eslint-define-config");
 
-module.exports = defineConfig({
+module.exports = {
   extends: [
     "plugin:jest/recommended",
     "plugin:jest/style",
@@ -19,4 +18,4 @@ module.exports = defineConfig({
     "jest-async/expect-return": "error",
     //#endregion jest-async
   },
-});
+};

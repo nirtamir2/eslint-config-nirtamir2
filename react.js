@@ -1,7 +1,6 @@
 require("@rushstack/eslint-patch/modern-module-resolution");
-const { defineConfig } = require("eslint-define-config");
 
-module.exports = defineConfig({
+module.exports = {
   extends: [
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
@@ -70,4 +69,4 @@ module.exports = defineConfig({
 
     //#endregion jsx-a11y from nextjs eslint config
   },
-});
+};

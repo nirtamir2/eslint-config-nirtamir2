@@ -1,7 +1,6 @@
 require("@rushstack/eslint-patch/modern-module-resolution");
-const { defineConfig } = require("eslint-define-config");
 
-module.exports = defineConfig({
+module.exports = {
   extends: [
     "plugin:no-unsanitized/DOM",
     "plugin:security/recommended",
@@ -16,4 +15,4 @@ module.exports = defineConfig({
     "no-secrets/no-secrets": 2,
     //#endregion no-secrets
   },
-});
+};
