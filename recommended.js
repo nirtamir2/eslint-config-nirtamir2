@@ -150,7 +150,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["**.js"],
+      "files": ["**/*.js", "**/*.jsx"],
       extends: ["plugin:jsdoc/recommended"],
     },
   ],

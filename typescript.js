@@ -119,7 +119,14 @@ module.exports = {
     "@typescript-eslint/ban-tslint-comment": "off",
     //#endregion no need
 
+    //#region @typescript-eslint - warn
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    //#endregion @typescript-eslint - too noisy rules
+
     //#region @typescript-eslint - styling rules I don't care about (prettier can handle it so I put it in off)
+    "space-infix-ops": "off",
+    "@typescript-eslint/space-infix-ops": "off",
     "no-extra-parens": "off",
     "@typescript-eslint/no-extra-parens": "off",
     "no-extra-semi": "off",
@@ -234,8 +241,6 @@ module.exports = {
     "@typescript-eslint/no-unsafe-return": "error",
     "no-unused-expressions": "off",
     "@typescript-eslint/no-unused-expressions": "error",
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": "error",
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": "error",
     "no-useless-constructor": "off",
@@ -267,8 +272,6 @@ module.exports = {
     "no-return-await": "off",
     "@typescript-eslint/return-await": "error",
     "@typescript-eslint/sort-type-union-intersection-members": "error",
-    "space-infix-ops": "off",
-    "@typescript-eslint/space-infix-ops": "error",
     "@typescript-eslint/strict-boolean-expressions": "error",
     "@typescript-eslint/switch-exhaustiveness-check": "error",
     "@typescript-eslint/triple-slash-reference": "error",
