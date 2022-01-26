@@ -1,4 +1,5 @@
 require("@rushstack/eslint-patch/modern-module-resolution");
+const confusingBrowserGlobals = require("confusing-browser-globals");
 
 module.exports = {
   extends: [
@@ -96,6 +97,7 @@ module.exports = {
     "no-debugger": "error",
     "no-console": ["error", { allow: ["warn", "error"] }],
     "no-cond-assign": ["error", "always"],
+    "no-restricted-globals": ["error"].concat(confusingBrowserGlobals),
     "no-restricted-syntax": [
       "error",
       "DebuggerStatement",
@@ -150,7 +152,7 @@ module.exports = {
   },
   overrides: [
     {
-      "files": ["**/*.js", "**/*.jsx"],
+      files: ["**/*.js", "**/*.jsx"],
       extends: ["plugin:jsdoc/recommended"],
     },
   ],
