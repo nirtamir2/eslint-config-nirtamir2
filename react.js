@@ -27,6 +27,10 @@ module.exports = {
         reservedFirst: true,
       },
     ],
+    "react/jsx-key": [
+      1,
+      { checkFragmentShorthand: true, checkKeyMustBeforeSpread: true },
+    ],
     "react/display-name": 0,
     "react/prop-types": 0,
     "react/jsx-pascal-case": [
