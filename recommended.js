@@ -31,8 +31,8 @@ module.exports = {
     "import/no-namespace": 2,
     "import/no-mutable-exports": 2,
     "import/no-self-import": 2,
-    "import/no-cycle": 2,
-    "import/no-unused-modules": 2,
+    // "import/no-cycle": 2, - slow rule
+    // "import/no-unused-modules": 2, - slow rule
     "import/no-anonymous-default-export": 2,
     // "import/no-default-export": 2,
     "import/no-named-default": 2,
@@ -46,6 +46,18 @@ module.exports = {
     "import/dynamic-import-chunkname": 2,
     "import/exports-last": 2,
     "import/no-dynamic-require": 2,
+
+    // https://typescript-eslint.io/docs/linting/troubleshooting#eslint-plugin-import - slow rules - should have a separate config
+    "import/no-named-as-default": 0,
+    "import/no-cycle": 0,
+    "import/no-unused-modules": 0,
+    "import/no-deprecated": 0,
+
+    // https://typescript-eslint.io/docs/linting/troubleshooting#eslint-plugin-import - have typescript equal checks
+    "import/named": 0,
+    "import/namespace": 0,
+    "import/default": 0,
+    "import/no-named-as-default-member": 0,
 
     // When using workspaces:
     // "import/no-relative-parent-imports": 2,
