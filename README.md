@@ -41,9 +41,11 @@ module.exports = {
 ```
 
 #### Next.js
+
 ```bash
 yarn add -D @next/core-web-vitals
 ```
+
 add `"plugin:@next/core-web-vitals"` or copy rules from https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/index.js +https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/core-web-vitals.js
 
 ## Prettier
@@ -103,6 +105,7 @@ Edit your `package.json` file
 {
   "scripts": {
     "prepare": "husky install",
+    "format": "prettier \"**/*\" --write --ignore-unknown",
     "lint": "eslint --fix \"**/*.{ts,tsx,js,jsx,json}\"",
     "type-check": "tsc --pretty --noEmit"
   },
