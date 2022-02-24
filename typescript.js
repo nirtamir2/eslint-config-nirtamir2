@@ -165,7 +165,45 @@ module.exports = {
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/array-type": ["error", { default: "generic" }],
     "@typescript-eslint/await-thenable": "error",
-    "@typescript-eslint/ban-types": "error",
+    "@typescript-eslint/ban-types": [
+      "error",
+      {
+        types: {
+          String: {
+            message: "Use `string` instead.",
+            fixWith: "string",
+          },
+          Number: {
+            message: "Use `number` instead.",
+            fixWith: "number",
+          },
+          Boolean: {
+            message: "Use `boolean` instead.",
+            fixWith: "boolean",
+          },
+          Symbol: {
+            message: "Use `symbol` instead.",
+            fixWith: "symbol",
+          },
+          Object: {
+            message:
+              "The `Object` type is mostly the same as `unknown`. You probably want `Record<string, unknown>` instead. See https://github.com/typescript-eslint/typescript-eslint/pull/848",
+            fixWith: "Record<string, unknown>",
+          },
+          "{}": {
+            message:
+              "The `{}` type is mostly the same as `unknown`. You probably want `Record<string, unknown>` instead.",
+            fixWith: "Record<string, unknown>",
+          },
+          object: {
+            message:
+              "The `object` type is hard to use. Use `Record<string, unknown>` instead. See: https://github.com/typescript-eslint/typescript-eslint/pull/848",
+            fixWith: "Record<string, unknown>",
+          },
+          Function: "Use a specific function type instead, like `() => void`.",
+        },
+      },
+    ],
     "@typescript-eslint/class-literal-property-style": "error", // IDK
     "@typescript-eslint/consistent-indexed-object-style": "error",
     "@typescript-eslint/consistent-type-assertions": "error",
