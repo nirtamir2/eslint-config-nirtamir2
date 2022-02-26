@@ -30,6 +30,7 @@ module.exports = {
     "etc/no-enum": "off",
     "etc/no-foreach": "off",
     "etc/no-internal": "off",
+    "etc/prefer-less-than": "off", // conflicts unicorn/explicit-length-check
     "etc/no-t": "off", // in the future
     //#endregion
 
@@ -38,7 +39,6 @@ module.exports = {
     "etc/no-const-enum": "error",
     "etc/no-misused-generics": "error",
     "etc/prefer-interface": "error",
-    "etc/prefer-less-than": "error",
     "etc/throw-error": "error",
     "etc/underscore-internal": "error",
     "etc/no-implicit-any-catch": "error",
