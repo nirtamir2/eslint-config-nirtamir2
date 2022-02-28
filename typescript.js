@@ -24,6 +24,17 @@ module.exports = {
     "tsdoc/syntax": "warn",
     //#endregion
 
+    //#region import
+    /**
+     * @see https://typescript-eslint.io/docs/linting/troubleshooting/#eslint-plugin-import
+     * Import rules that have TypeScript specific checks
+     */
+    "import/named": "off",
+    "import/namespace": "off",
+    "import/default": "off",
+    "import/no-named-as-default-member": "off",
+    //#endregion
+
     //#region etc - off too strict rules
     "etc/no-commented-out-code": "off", //too strict?
     "etc/no-deprecated": "off",
