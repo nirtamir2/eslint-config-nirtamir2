@@ -9,6 +9,7 @@
   "license": "MIT",
   "author": "Nir Tamir",
   "files": [
+    "index.js",
     "compat.js",
     "jest.js",
     "react.js",

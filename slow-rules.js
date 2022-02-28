@@ -1,5 +1,3 @@
-require("@rushstack/eslint-patch/modern-module-resolution");
-
 // @see https://typescript-eslint.io/docs/linting/troubleshooting#eslint-plugin-import
 module.exports = {
   rules: {

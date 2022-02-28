@@ -1,4 +1,3 @@
-require("@rushstack/eslint-patch/modern-module-resolution");
 const confusingBrowserGlobals = require("confusing-browser-globals");
 
 module.exports = {
