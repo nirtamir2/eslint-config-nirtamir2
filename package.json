@@ -27,6 +27,7 @@
     "*.{js,css,md}": "prettier --write"
   },
   "dependencies": {
+    "@nozbe/eslint-plugin-nozbe": "^1.0.0",
     "@rushstack/eslint-patch": "^1.1.1",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",

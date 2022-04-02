@@ -3,6 +3,7 @@ lockfileVersion: 5.3
 specifiers:
   '@commitlint/cli': ^16.2.3
   '@commitlint/config-conventional': ^16.2.1
+  '@nozbe/eslint-plugin-nozbe': ^1.0.0
   '@rushstack/eslint-patch': ^1.1.1
   '@trivago/prettier-plugin-sort-imports': ^3.2.0
   '@types/node': ^17.0.23
@@ -46,6 +47,7 @@ specifiers:
   typescript: ^4.6.3
 
 dependencies:
+  '@nozbe/eslint-plugin-nozbe': 1.0.0
   '@rushstack/eslint-patch': 1.1.1
   '@typescript-eslint/eslint-plugin': 5.17.0_689ff565753ecf7c3328c07fad067df5
   '@typescript-eslint/parser': 5.17.0_eslint@8.12.0+typescript@4.6.3
@@ -614,6 +616,10 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
+
+  /@nozbe/eslint-plugin-nozbe/1.0.0:
+    resolution: {integrity: sha512-nG0v3UMCCKh5mpDYhDNOu1E52gVu9MTgoOag5y9PeLzUL79EJUtU3UoOZ3IRx/L0xpEbisIIoA623umIiBZaCg==}
+    dev: false
 
   /@octokit/auth-token/2.5.0:
     resolution: {integrity: sha512-r5FVUJCOLl19AxiuZD2VRZ/ORjp/4IN98Of6YJoJOkY75CIBuYfmiNHGrDwXr+aLGG55igl9QrxX3hbiXlLb+g==}
