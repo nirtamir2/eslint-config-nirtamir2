@@ -5,8 +5,8 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:import/react",
     "plugin:jsx-a11y/recommended",
-    "plugin:@nozbe/nozbe",
   ],
+  plugins: ["@nozbe/nozbe"],
   settings: {
     react: {
       version: "detect",
