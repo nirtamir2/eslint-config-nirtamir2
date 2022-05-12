@@ -36,17 +36,47 @@ module.exports = {
     "nirtamir2/security",
     "nirtamir2/compat",
     "nirtamir2/jest",
+    "nirtamir2/next", // should be after recommended react and typescript
   ],
 };
 ```
 
 #### Next.js
-
-```bash
-yarn add -D @next/core-web-vitals
+You may add
+```
+ overrides: [
+    {
+      // Frontend
+      files: ["apps/next-app/**/*.{ts,tsx}"],
+      extends: ["@nirtamir2/next"],
+      settings: {
+        next: {
+          rootDir: "apps/next-app",
+        },
+      },
+      parserOptions: {
+        project: ["apps/next-app/tsconfig.json"],
+      },
+    },
 ```
 
-add `"plugin:@next/core-web-vitals"` or copy rules from https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/index.js +https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/core-web-vitals.js
+## Import resolution
+If you have problems with the import resolution try
+```
+ root: true,
+  parserOptions: {
+    tsconfigRootDir: __dirname,
+    project: ["**/tsconfig.json"],
+  },
+  settings: {
+    "import/resolver": {
+      typescript: {
+        alwaysTryTypes: true,
+        project: ["**/tsconfig.json"],
+      },
+    },
+  },
+```
 
 ## Prettier
 
