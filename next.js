@@ -13,7 +13,7 @@ module.exports = {
   },
     {
       // Next.js Pages
-      files: ["**/pages/**/*.tsx"],
+      files: ["**/pages/**/*.ts?(x)"],
       rules: {
         "import/no-unused-modules": "off",
         "import/no-default-export": "off",
