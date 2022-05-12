@@ -13,6 +13,7 @@ module.exports = {
     "plugin:no-use-extend-native/recommended",
     "plugin:markdown/recommended",
     "plugin:import/recommended",
+    "plugin:workspaces/recommended",
     "prettier",
   ],
   settings: {
@@ -26,7 +27,10 @@ module.exports = {
     "sort-keys-fix/sort-keys-fix": 0,
     //#endregion sort-keys-fix
 
+    "array-func/prefer-array-from": 0, // conflicts with unicorn/prefer-spread
+
     //#region import
+    "import/no-unresolved": 0,
     "import/no-namespace": 2,
     "import/no-mutable-exports": 2,
     "import/no-self-import": 2,
@@ -48,8 +52,8 @@ module.exports = {
 
     // https://typescript-eslint.io/docs/linting/troubleshooting#eslint-plugin-import - slow rules - should have a separate config
     "import/no-named-as-default": 0,
-    "import/no-cycle": 0,
-    "import/no-unused-modules": 0,
+    "import/no-cycle": 1,
+    "import/no-unused-modules": [1, { unusedExports: true }],
     "import/no-deprecated": 0,
 
     // https://typescript-eslint.io/docs/linting/troubleshooting#eslint-plugin-import - have typescript equal checks
@@ -93,6 +97,9 @@ module.exports = {
     //#endregion unicorn
 
     //#region eslint
+
+    "no-constant-binary-expression": "error",
+    "max-params": "error",
 
     // ignore eslint prettier that remove this rule, because I want to remove useless template literal
     // quotes: [2, "double", { allowTemplateLiterals: false }],
@@ -165,6 +172,13 @@ module.exports = {
     {
       files: ["**/*.js", "**/*.jsx"],
       extends: ["plugin:jsdoc/recommended"],
+    },
+    {
+      // Index files and TypeScript declarations
+      files: ["**/*.d.ts", "packages/*/index.ts"],
+      rules: {
+        "import/no-unused-modules": "off",
+      },
     },
   ],
 };

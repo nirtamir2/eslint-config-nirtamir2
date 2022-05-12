@@ -165,6 +165,8 @@ module.exports = {
     //#endregion
 
     //#region @typescript-eslint all https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/all.ts
+    "@typescript-eslint/no-duplicate-enum-values": "error",
+    "@typescript-eslint/no-useless-empty-export": "error",
     "@typescript-eslint/ban-ts-comment": [
       "error",
       {
@@ -317,7 +319,7 @@ module.exports = {
     "@typescript-eslint/restrict-plus-operands": "error",
     "@typescript-eslint/restrict-template-expressions": "error",
     "no-return-await": "off",
-    "@typescript-eslint/return-await": "error",
+    "@typescript-eslint/return-await": ["error", "always"],
     "@typescript-eslint/sort-type-union-intersection-members": "error",
     "@typescript-eslint/strict-boolean-expressions": "error",
     "@typescript-eslint/switch-exhaustiveness-check": "error",
