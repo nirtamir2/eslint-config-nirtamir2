@@ -6,18 +6,15 @@ module.exports = {
     "plugin:import/react",
     "plugin:jsx-a11y/recommended",
   ],
-  plugins: ["@nozbe/nozbe"],
   settings: {
     react: {
       version: "detect",
     },
   },
   rules: {
-    // use ternary operator (? :) instead of logical operator (&& ||) in jsx
-    // https://github.com/Nozbe/eslint-plugin-nozbe
-    "@nozbe/nozbe/no-jsx-andand": 2,
-
     //#region react
+    "react/jsx-no-leaked-render": ["error", { validStrategies: ["ternary"] }],
+
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
     "react/jsx-sort-props": [
       "error",
