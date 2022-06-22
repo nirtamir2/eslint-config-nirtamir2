@@ -1,5 +1,6 @@
 module.exports = {
   extends: [
+    "plugin:expect-type/recommended",
     "plugin:@typescript-eslint/recommended", // should not add new rules
     "plugin:@typescript-eslint/recommended-requiring-type-checking", // should not add new rules
     "plugin:etc/recommended", // should not add new rules
