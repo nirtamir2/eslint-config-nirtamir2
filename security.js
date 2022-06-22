@@ -2,9 +2,6 @@ module.exports = {
   extends: [
     "plugin:no-unsanitized/DOM",
     "plugin:security/recommended",
-    "plugin:weblint-security/recommended",
-    "plugin:weblint-security/react",
-    "plugin:weblint-security/nodejs",
   ],
   plugins: ["no-secrets"],
 
