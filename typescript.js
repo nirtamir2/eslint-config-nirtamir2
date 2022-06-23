@@ -7,7 +7,7 @@ module.exports = {
     "plugin:import/typescript",
     "prettier",
   ],
-  plugins: ["tsdoc"],
+  plugins: ["tsdoc", "eslint-plugin-expect-type"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 2020,
@@ -321,7 +321,7 @@ module.exports = {
     "@typescript-eslint/restrict-template-expressions": "error",
     "no-return-await": "off",
     "@typescript-eslint/return-await": ["error", "always"],
-    "@typescript-eslint/sort-type-union-intersection-members": "error",
+    "@typescript-eslint/sort-type-union-intersection-members": "error", // maybe too strict and we need to change to "@typescript-eslint/sort-type-union-intersection-members": ["error", {checkIntersections: false, checkUnions: false}]
     "@typescript-eslint/strict-boolean-expressions": "error",
     "@typescript-eslint/switch-exhaustiveness-check": "error",
     "@typescript-eslint/triple-slash-reference": "error",
