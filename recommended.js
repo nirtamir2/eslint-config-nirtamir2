@@ -3,7 +3,6 @@ const confusingBrowserGlobals = require("confusing-browser-globals");
 module.exports = {
   extends: [
     "eslint:recommended",
-    "plugin:n/recommended",
     "plugin:sonarjs/recommended",
     "plugin:unicorn/recommended",
     "plugin:eslint-comments/recommended",
@@ -168,13 +167,6 @@ module.exports = {
     "require-await": "off",
     "no-return-assign": "off",
     //#endregion eslint
-
-    //#region eslint-plugin-n
-    "n/no-unsupported-features/es-syntax": "off", // I use a transpiler
-    "n/no-missing-import": "off", // Better to handle with eslint-plugin-import because of false positive
-    "n/no-process-exit": "off", // already have this rule in unicorn/no-process-exit
-    "n/no-unpublished-import": "off" //type-fest for example has no runtime
-    //#endregion
   },
   overrides: [
     {
