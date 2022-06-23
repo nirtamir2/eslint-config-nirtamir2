@@ -104,7 +104,7 @@ module.exports = {
     // ignore eslint prettier that remove this rule, because I want to remove useless template literal
     // quotes: [2, "double", { allowTemplateLiterals: false }],
     "no-implicit-coercion": ["error"],
-    "prefer-destructuring": "error",
+    "prefer-destructuring": ["error", { object: true, array: false }], // a[0] should not destruct
     "func-style": ["error", "declaration", { allowArrowFunctions: true }],
 
     // Based on https://github.com/antfu/eslint-config/blob/master/packages/basic/index.js
