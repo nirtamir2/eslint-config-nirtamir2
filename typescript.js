@@ -277,7 +277,7 @@ module.exports = {
     "@typescript-eslint/no-this-alias": "error",
     "no-throw-literal": "off",
     "@typescript-eslint/no-throw-literal": "error",
-    "@typescript-eslint/no-type-alias": "error",
+    "@typescript-eslint/no-type-alias": "off", // A & B, type AppRouter = typeof appRouter, Merge<A,B>
     "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
     "@typescript-eslint/no-unnecessary-condition": "error",
     "@typescript-eslint/no-unnecessary-qualifier": "error",
