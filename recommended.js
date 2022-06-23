@@ -47,7 +47,7 @@ module.exports = {
     "import/no-useless-path-segments": 2,
     "import/no-webpack-loader-syntax": 2,
     "import/dynamic-import-chunkname": 2,
-    "import/exports-last": 2,
+    // "import/exports-last": 2, // some functions are depended on other, and I want export function instead of one single export
     "import/no-dynamic-require": 2,
 
     // https://typescript-eslint.io/docs/linting/troubleshooting#eslint-plugin-import - slow rules - should have a separate config
