@@ -17,6 +17,8 @@
     "security.js",
     "storybook.js",
     "typescript.js",
+    "i18n.js",
+    "_i18next-syntax-validator.js",
     "next.js"
   ],
   "scripts": {
@@ -41,6 +43,7 @@
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-etc": "^2.0.2",
     "eslint-plugin-expect-type": "^0.2.0",
+    "eslint-plugin-i18n-json": "^3.1.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^26.8.4",
     "eslint-plugin-jest-async": "^1.0.3",
