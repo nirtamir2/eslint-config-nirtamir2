@@ -34,6 +34,7 @@ specifiers:
   eslint-plugin-security: ^1.5.0
   eslint-plugin-sonarjs: ^0.15.0
   eslint-plugin-sort-keys-fix: ^1.1.2
+  eslint-plugin-storybook: ^0.6.4
   eslint-plugin-testing-library: ^5.6.0
   eslint-plugin-tsdoc: ^0.2.16
   eslint-plugin-unicorn: ^43.0.2
@@ -75,6 +76,7 @@ dependencies:
   eslint-plugin-security: 1.5.0
   eslint-plugin-sonarjs: 0.15.0
   eslint-plugin-sort-keys-fix: 1.1.2
+  eslint-plugin-storybook: 0.6.4
   eslint-plugin-testing-library: 5.6.0
   eslint-plugin-tsdoc: 0.2.16
   eslint-plugin-unicorn: 43.0.2
@@ -860,6 +862,12 @@ packages:
     resolution: {integrity: sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ==}
     engines: {node: '>=6'}
     dev: true
+
+  /@storybook/csf/0.0.1:
+    resolution: {integrity: sha512-USTLkZze5gkel8MYCujSRBVIrUQ3YPBrLOx7GNk/0wttvVtlzWXAq9eLbQ4p/NicGxP+3T7KPEMVV//g+yubpw==}
+    dependencies:
+      lodash: 4.17.21
+    dev: false
 
   /@szmarczak/http-timer/1.1.2:
     resolution: {integrity: sha512-XIB2XbzHTN6ieIjfIMV9hlVcfPU26s2vafYWQcZHWXHOxiaRZYEDKEwdl129Zyg50+foYV2jCgtrqSA6qNuNSA==}
@@ -3237,6 +3245,21 @@ packages:
       esutils: 2.0.3
       natural-compare: 1.4.0
       requireindex: 1.2.0
+    dev: false
+
+  /eslint-plugin-storybook/0.6.4:
+    resolution: {integrity: sha512-wxwbAZqlgjj6MbS/llY7wnXCCUsuFcLB1XnahbgBtjmsFUggpiECt01Dt8huaKvriVXg2w4d7Ye+GzA00rdcKg==}
+    engines: {node: 12.x || 14.x || >= 16}
+    peerDependencies:
+      eslint: '>=6'
+    dependencies:
+      '@storybook/csf': 0.0.1
+      '@typescript-eslint/experimental-utils': 5.33.1
+      requireindex: 1.2.0
+      ts-dedent: 2.2.0
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
     dev: false
 
   /eslint-plugin-testing-library/5.6.0:
@@ -6813,6 +6836,11 @@ packages:
     resolution: {integrity: sha512-WZGXGstmCWgeevgTL54hrCuw1dyMQIzWy7ZfqRJfSmJZBwklI15egmQytFP6bPidmw3M8d5yEowl1niq4vmqZw==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /ts-dedent/2.2.0:
+    resolution: {integrity: sha512-q5W7tVM71e2xjHZTlgfTDoPF/SmqKG5hddq9SzR49CH2hayqRKJtQ4mtRlSxKaJlR/+9rEM+mnBHf7I2/BQcpQ==}
+    engines: {node: '>=6.10'}
+    dev: false
 
   /ts-node/10.9.1_itmtyrrie7wpjnrpwbb5uqyzwa:
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
