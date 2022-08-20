@@ -131,7 +131,7 @@ module.exports = {
 
     //#region @typescript-eslint - warn
     "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
     //#endregion @typescript-eslint - too noisy rules
 
     //#region @typescript-eslint - styling rules I don't care about (prettier can handle it so I put it in off)
