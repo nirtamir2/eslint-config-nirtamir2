@@ -31,8 +31,9 @@ module.exports = {
   root: true,
   extends: [
     "nirtamir2/recommended",
-    "nirtamir2/react",
     "nirtamir2/typescript",
+    "nirtamir2/react",
+    "nirtamir2/solid",
     "nirtamir2/security",
     "nirtamir2/compat",
     "nirtamir2/jest",
