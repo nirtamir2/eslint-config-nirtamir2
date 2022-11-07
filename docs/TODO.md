@@ -9,4 +9,4 @@ https://github.com/Shopify/hydrogen/blob/main/.eslintrc.js
 - [ ] [@shopify/react-hooks-strict-return](https://github.com/Shopify/web-configs/blob/main/packages/eslint-plugin/docs/rules/react-hooks-strict-return.md)
 - [ ] [eslint-plugin-vitest](https://github.com/veritem/eslint-plugin-vitest)
 - [ ] [eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library)
-- [ ] [eslint-plugin-storybook](https://github.com/storybookjs/eslint-plugin-storybook)
+- [ ] [eslint-plugin-tailwindcss](https://github.com/francoismassart/eslint-plugin-tailwindcss)
