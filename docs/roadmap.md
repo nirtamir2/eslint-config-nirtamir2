@@ -119,7 +119,7 @@ https://github.com/welldone-software/eslint-plugin-welldone/blob/master/rules/im
 ## Usage:
 
 ```bash
-yarn add eslint-config-nirtamir2
+pnpm add eslint-config-nirtamir2
 ```
 
 In `.eslintrc`:

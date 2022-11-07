@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-yarn add -D eslint eslint-config-nirtamir2
+pnpm add -D eslint eslint-config-nirtamir2
 ```
 
 Edit your `package.json` file
@@ -84,29 +84,55 @@ If you have problems with the import resolution try
 ## Prettier
 
 ```bash
-yarn add -D prettier prettier-plugin-packagejson @trivago/prettier-plugin-sort-imports
+pnpm add -D prettier prettier-plugin-tailwindcss @trivago/prettier-plugin-sort-imports prettier-plugin-packagejson
 ```
 
 Edit your `.prettierrc.js` file
 
 ```js
+//#region pluginToMakeTailwindAndSortImportsWorkTogether
+const pluginSortImports = require("@trivago/prettier-plugin-sort-imports");
+const pluginTailwindcss = require("prettier-plugin-tailwindcss");
+
+/** @type {import("prettier").Parser}  */
+const typescriptParser = {
+  ...pluginSortImports.parsers.typescript,
+  parse: pluginTailwindcss.parsers.typescript.parse,
+};
+
+/** @type {import("prettier").Plugin}  */
+const pluginToMakeTailwindAndSortImportsWorkTogether = {
+  parsers: {
+    typescript: typescriptParser,
+  },
+};
+//#endregion
+
 module.exports = {
   plugins: [
+    /**
+     * This is a workaround for making tailwind and sort-imports plugins work together
+     * @See https://github.com/tailwindlabs/prettier-plugin-tailwindcss/issues/31#issuecomment-1195411734
+     */
+    pluginToMakeTailwindAndSortImportsWorkTogether,
+    require.resolve("prettier-plugin-tailwindcss"),
     require.resolve("@trivago/prettier-plugin-sort-imports"),
     require.resolve("prettier-plugin-packagejson"),
   ],
+  // @see https://github.com/tailwindlabs/prettier-plugin-tailwindcss#resolving-your-tailwind-configuration
+  tailwindConfig: "./tailwind.config.js",
   // @see https://github.com/trivago/prettier-plugin-sort-imports
   importOrder: [
     "^react$",
     "<THIRD_PARTY_MODULES>",
     // Internal modules
-    "^@core/(.*)$",
-    "^@server/(.*)$",
-    "^@ui/(.*)$",
-    "^@*/(.*)$",
+    "^@app/(.*)$",
+    // TypeScript TSConfig path aliases
+    "^@/(.*)$",
     // Relative imports
     "^[./]",
   ],
+  importOrderSortSpecifiers: true,
   overrides: [
     {
       files: "*.svg",
@@ -116,19 +142,20 @@ module.exports = {
     },
   ],
 };
+;
 ```
 
 ## Husky
 
 ```bash
-yarn add -D husky lint-staged
-npx husky-init && yarn
+pnpm add -D husky lint-staged
+npx husky-init && pnpm i
 ```
 
 In `.husky/pre-commit` add
 
 ```bash
-yarn type-check
+pnpm run type-check
 npx lint-staged
 ```
 
@@ -152,5 +179,5 @@ Edit your `package.json` file
 ## Release / Publish
 
 ```bash
-yarn publish
+pnpm publish
 ```
