@@ -45,7 +45,9 @@ module.exports = {
 ```
 
 #### Next.js
+
 You may add
+
 ```
  overrides: [
     {
@@ -64,7 +66,9 @@ You may add
 ```
 
 ## Import resolution
+
 If you have problems with the import resolution try
+
 ```
  root: true,
   parserOptions: {
@@ -142,7 +146,6 @@ module.exports = {
     },
   ],
 };
-;
 ```
 
 ## Husky
@@ -166,7 +169,7 @@ Edit your `package.json` file
   "scripts": {
     "prepare": "husky install",
     "format": "prettier \"**/*\" --write --ignore-unknown",
-    "lint": "eslint --fix \"**/*.{ts,tsx,js,jsx,json}\"",
+    "lint": "eslint --fix \"**/*.{ts,tsx,js,jsx}\" \"**/locales/**/*.json\"",
     "type-check": "tsc --pretty --noEmit"
   },
   "lint-staged": {
@@ -174,6 +177,18 @@ Edit your `package.json` file
     "*.{ts,tsx,css,html,md}": "prettier --write"
   }
 }
+```
+
+## TypeScript
+
+```bash
+pnpm add -D @tsconfig/strictest
+```
+
+In `tsconfig.json` add to the top
+
+```
+"extends": "@tsconfig/strictest/tsconfig.json",
 ```
 
 ## Release / Publish

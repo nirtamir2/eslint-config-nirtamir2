@@ -10,3 +10,6 @@ https://github.com/Shopify/hydrogen/blob/main/.eslintrc.js
 - [ ] [eslint-plugin-vitest](https://github.com/veritem/eslint-plugin-vitest)
 - [ ] [eslint-plugin-testing-library](https://github.com/testing-library/eslint-plugin-testing-library)
 - [ ] [eslint-plugin-tailwindcss](https://github.com/francoismassart/eslint-plugin-tailwindcss)
+- [ ] https://github.com/AnnAngela/eslint-plugin/blob/master/docs/rules/prefer-reflect.md
+- [ ] https://github.com/mishguruorg/eslint-plugin-mishguru/blob/master/docs/rules/no-return-call-within-async-try.md
+- [ ] eslint-plugin-react usefull rules like type=button and enable for solid config too
