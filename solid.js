@@ -9,12 +9,11 @@ module.exports = {
   },
   rules: {
     // "react/boolean-prop-naming": ["error", { "rule": "^(is|has)[A-Z]([A-Za-z0-9]?)+|disabled|open" }]
-    "import/dynamic-import-chunkname": "off",
+    "import/dynamic-import-chunkname": "off", // no need webpack anymore
     "react/button-has-type": "error",
-    // Can ignore next rule
-    // Breaks reactivity in solid.js. In react it should be always
+    // Breaks reactivity in solid.js but nice to have in react
     "react/destructuring-assignment": [
-      "warn",
+      "off", // we have eslint plugin solid for that
       "never",
       {
         destructureInSignature: "ignore",
@@ -22,7 +21,7 @@ module.exports = {
     ],
     "react/display-name": "off",
     "react/forbid-component-props": [
-      "warn",
+      "off", // too aggressive to use
       {
         forbid: [
           {
@@ -37,10 +36,10 @@ module.exports = {
     "react/forbid-foreign-prop-types": "off",
     "react/forbid-prop-types": "off",
     "react/function-component-definition": [
-      "warn", // may be too strict
+      "off", // may be too strict
       { namedComponents: "function-declaration" },
     ],
-    "react/hook-use-state": "warn",
+    "react/hook-use-state": "off", // may be too aggressive
     "react/iframe-missing-sandbox": "error",
     "react/jsx-boolean-value": ["never", "always"],
     "react/jsx-child-element-spacing": "off", // I think prettier can handle it
@@ -59,7 +58,7 @@ module.exports = {
     ],
     "react/jsx-first-prop-new-line": "off", // prettier
     "react/jsx-fragments": ["warn", "syntax"],
-    "react/jsx-handler-names": 2,
+    "react/jsx-handler-names": "error",
     "react/jsx-indent-props": "off", // prettier
     "react/jsx-indent": "off", // prettier
     "react/jsx-max-depth": ["warn", { max: 30 }],
@@ -72,7 +71,7 @@ module.exports = {
     "react/jsx-no-leaked-render": ["error", { validStrategies: ["ternary"] }],
     // Good for i18n only
     "react/jsx-no-literals": [
-      "warn",
+      "off", // too aggressive fpr now
       {
         noStrings: true,
         allowedStrings: [],
@@ -91,7 +90,7 @@ module.exports = {
     "react/jsx-sort-default-props": "off",
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
     "react/jsx-sort-props": [
-      "error",
+      "warn",
       {
         callbacksLast: true,
         shorthandFirst: true,
@@ -146,7 +145,7 @@ module.exports = {
     "react/require-default-props": "off",
     "react/require-optimization": "off",
     "react/require-render-return": "off",
-    "react/self-closing-comp": "error",
+    "react/self-closing-comp": "warn",
     "react/sort-comp": "off",
     "react/sort-default-props": "off",
     "react/sort-prop-types": "off",
