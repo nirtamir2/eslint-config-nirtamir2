@@ -41,7 +41,7 @@ module.exports = {
     ],
     "react/hook-use-state": "off", // may be too aggressive
     "react/iframe-missing-sandbox": "error",
-    "react/jsx-boolean-value": ["never", "always"],
+    "react/jsx-boolean-value": ["warn", "never",],
     "react/jsx-child-element-spacing": "off", // I think prettier can handle it
     "react/jsx-closing-bracket-location": "off", // I think prettier can handle it
     "react/jsx-closing-tag-location": "off", // I think prettier can handle it
