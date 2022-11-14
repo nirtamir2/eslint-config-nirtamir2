@@ -129,7 +129,7 @@ module.exports = {
     "react/no-this-in-sfc": "off",
     "react/no-typos": "off",
     "react/no-unescaped-entities": "error",
-    "react/no-unknown-property": "error",
+    "react/no-unknown-property": "off", // TypeScript handle it better
     "react/no-unsafe": "off",
     "react/no-unstable-nested-components": "error",
     "react/no-unused-class-component-methods": "off",
