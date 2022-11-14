@@ -32,7 +32,7 @@ module.exports = {
 
     "array-func/prefer-array-from": 0, // conflicts with unicorn/prefer-spread
 
-    "@annangela/prefer-reflect": "error",
+    // "@annangela/prefer-reflect": "error", // does not allow in operator so this is not good for TypeScript
 
     //#region import
     "import/no-unresolved": 0,
