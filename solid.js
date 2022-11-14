@@ -1,9 +1,6 @@
 module.exports = {
-  extends: [
-    "plugin:jsx-a11y/recommended",
-    "plugin:solid/typescript",
-    "plugin:react/recommended",
-  ],
+  extends: ["plugin:jsx-a11y/recommended", "plugin:solid/typescript"],
+  plugins: ["react"],
   settings: {
     "import/resolver": {
       typescript: true,
