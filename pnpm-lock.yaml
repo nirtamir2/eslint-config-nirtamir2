@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@annangela/eslint-plugin': ^1.1.2
   '@commitlint/cli': ^17.2.0
   '@commitlint/config-conventional': ^17.2.0
   '@rushstack/eslint-patch': ^1.2.0
@@ -49,6 +50,7 @@ specifiers:
   semantic-release-cli: ^5.4.4
 
 dependencies:
+  '@annangela/eslint-plugin': 1.1.2
   '@rushstack/eslint-patch': 1.2.0
   '@typescript-eslint/eslint-plugin': 5.42.1_pgmfr5ztkthyodygzwj2cbdika
   '@typescript-eslint/parser': 5.42.1
@@ -107,6 +109,13 @@ packages:
       '@jridgewell/gen-mapping': 0.1.1
       '@jridgewell/trace-mapping': 0.3.17
     dev: true
+
+  /@annangela/eslint-plugin/1.1.2:
+    resolution: {integrity: sha512-liO1DuR+PYUyyfzh4yOWQZ8x3OQ75YFhd/OB1eqFDNGfojmgqEjD9obPkceycohRHoGmXY8YyPLq5rprWEzCGg==}
+    engines: {node: ^16.18.0 || ^18.12.0}
+    peerDependencies:
+      eslint: '>=7'
+    dev: false
 
   /@babel/code-frame/7.18.6:
     resolution: {integrity: sha512-TDCmlK5eOvH+eH7cdAFlNXeVJqWIQ7gW9tY1GJIpUtFb6CmjVyq2VM3u71bOyR8CRihcCgMUYoDNyLXao3+70Q==}

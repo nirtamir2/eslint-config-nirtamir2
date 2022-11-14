@@ -21,13 +21,18 @@ module.exports = {
       node: { extensions: [".js", ".mjs", ".ts", ".d.ts"] },
     },
   },
-  plugins: ["sort-keys-fix" /* not in use but can be */],
+  plugins: [
+    "sort-keys-fix" /* not in use but can be */,
+    "@annangela/eslint-plugin",
+  ],
   rules: {
     //#region sort-keys-fix
     "sort-keys-fix/sort-keys-fix": 0,
     //#endregion sort-keys-fix
 
     "array-func/prefer-array-from": 0, // conflicts with unicorn/prefer-spread
+
+    "@annangela/prefer-reflect": "error",
 
     //#region import
     "import/no-unresolved": 0,
