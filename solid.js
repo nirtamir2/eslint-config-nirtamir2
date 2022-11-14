@@ -7,7 +7,7 @@ module.exports = {
       node: true,
     },
     react: {
-      version: "latest",
+      version: "18.2.0",
     },
   },
   rules: {
