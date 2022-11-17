@@ -30,6 +30,7 @@ Edit your `.eslintrc` file (choose the configs you want)
 module.exports = {
   root: true,
   extends: [
+    "nirtamir2",
     "nirtamir2/recommended",
     "nirtamir2/typescript",
     "nirtamir2/react",
