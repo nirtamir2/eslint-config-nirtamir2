@@ -87,7 +87,13 @@ module.exports = {
     "react/jsx-no-undef": "error",
     "react/jsx-no-useless-fragment": ["error", { allowExpressions: true }],
     "react/jsx-one-expression-per-line": "off", // prettier
-    "react/jsx-pascal-case": "error",
+    "react/jsx-pascal-case": [
+      "error",
+      {
+        allowLeadingUnderscore: true,
+        allowNamespace: true,
+      },
+    ],
     "react/jsx-props-no-multi-spaces": "off", // prettier
     "react/jsx-props-no-spreading": "off", // but interesting, better to avoid spreads but sometimes it's needed
     "react/jsx-sort-default-props": "off",
