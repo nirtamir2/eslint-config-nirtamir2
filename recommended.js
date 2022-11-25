@@ -7,6 +7,7 @@ module.exports = {
     "plugin:unicorn/recommended",
     "plugin:eslint-comments/recommended",
     "plugin:array-func/recommended",
+    "plugin:github/recommended",
     "plugin:promise/recommended",
     "plugin:optimize-regex/recommended",
     "plugin:regexp/recommended",
@@ -33,6 +34,28 @@ module.exports = {
     "array-func/prefer-array-from": 0, // conflicts with unicorn/prefer-spread
 
     // "@annangela/prefer-reflect": "error", // does not allow in operator so this is not good for TypeScript
+
+    //#region github
+    "github/a11y-no-generic-link-text": 2,
+    "github/array-foreach": 2,
+    "github/async-currenttarget": 2,
+    "github/async-preventdefault": 2,
+    "github/authenticity-token": 2,
+    "github/get-attribute": 2,
+    "github/js-class-name": 2,
+    "github/no-blur": 2,
+    "github/no-d-none": 2,
+    "github/no-dataset": 2,
+    "github/no-implicit-buggy-globals": 2,
+    "github/no-inner-html": 2,
+    "github/no-innerText": 2,
+    "github/no-dynamic-script-tag": 2,
+    "github/no-then": 2,
+    "github/no-useless-passive": 2,
+    "github/prefer-observers": 2,
+    "github/require-passive-events": 2,
+    "github/unescaped-html-literal": 2,
+    //#endregion github
 
     //#region import
     "import/no-unresolved": 0,
