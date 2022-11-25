@@ -7,7 +7,6 @@ module.exports = {
     "plugin:unicorn/recommended",
     "plugin:eslint-comments/recommended",
     "plugin:array-func/recommended",
-    "plugin:github/recommended",
     "plugin:promise/recommended",
     "plugin:optimize-regex/recommended",
     "plugin:regexp/recommended",
@@ -24,7 +23,8 @@ module.exports = {
   },
   plugins: [
     "sort-keys-fix" /* not in use but can be */,
-    "@annangela/eslint-plugin",
+    "github", // added all the rules manually
+    "@annangela/eslint-plugin"
   ],
   rules: {
     //#region sort-keys-fix
