@@ -1,5 +1,6 @@
 module.exports = {
   extends: [
+    "plugin:ssr-friendly/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
@@ -12,6 +13,8 @@ module.exports = {
     },
   },
   rules: {
+    "ssr-friendly/no-dom-globals-in-react-cc-render": "off", // I don't use class components
+
     //#region react
     "react/jsx-no-leaked-render": ["error", { validStrategies: ["ternary"] }],
 

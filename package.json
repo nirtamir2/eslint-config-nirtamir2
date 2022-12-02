@@ -65,6 +65,7 @@
     "eslint-plugin-solid": "^0.8.0",
     "eslint-plugin-sonarjs": "^0.16.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-ssr-friendly": "^1.2.0",
     "eslint-plugin-storybook": "^0.6.7",
     "eslint-plugin-testing-library": "^5.9.1",
     "eslint-plugin-tsdoc": "^0.2.17",

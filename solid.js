@@ -1,5 +1,9 @@
 module.exports = {
-  extends: ["plugin:jsx-a11y/recommended", "plugin:solid/typescript"],
+  extends: [
+    "plugin:ssr-friendly/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:solid/typescript",
+  ],
   plugins: ["react"],
   settings: {
     "import/resolver": {
@@ -11,6 +15,8 @@ module.exports = {
     },
   },
   rules: {
+    "ssr-friendly/no-dom-globals-in-react-cc-render": "off", // not relevant to solid
+
     // "react/boolean-prop-naming": ["error", { "rule": "^(is|has)[A-Z]([A-Za-z0-9]?)+|disabled|open" }]
     "import/dynamic-import-chunkname": "off", // no need webpack anymore
     "react/button-has-type": "error",
@@ -164,6 +170,12 @@ module.exports = {
     "react/void-dom-elements-no-children": "error",
   },
   overrides: [
+    {
+      files: ["entry-client.tsx"],
+      rules: {
+        "ssr-friendly/no-dom-globals-in-module-scope": "off",
+      },
+    },
     // solid-start default exports
     {
       files: ["**/routes/**", "root.tsx", "entry-server.tsx"],
