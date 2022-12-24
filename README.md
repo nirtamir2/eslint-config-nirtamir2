@@ -34,6 +34,7 @@ module.exports = {
     "nirtamir2/recommended",
     "nirtamir2/typescript",
     "nirtamir2/react",
+    "nirtamir2/query",
     "nirtamir2/solid",
     "nirtamir2/security",
     "nirtamir2/compat",
