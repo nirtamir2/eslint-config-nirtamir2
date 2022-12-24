@@ -5,6 +5,7 @@ specifiers:
   '@commitlint/cli': ^17.2.0
   '@commitlint/config-conventional': ^17.2.0
   '@rushstack/eslint-patch': ^1.2.0
+  '@tanstack/eslint-plugin-query': ^4.20.2
   '@trivago/prettier-plugin-sort-imports': ^3.4.0
   '@types/node': ^18.11.9
   '@typescript-eslint/eslint-plugin': ^5.42.1
@@ -54,6 +55,7 @@ specifiers:
 dependencies:
   '@annangela/eslint-plugin': 1.1.2
   '@rushstack/eslint-patch': 1.2.0
+  '@tanstack/eslint-plugin-query': 4.20.2
   '@typescript-eslint/eslint-plugin': 5.42.1_pgmfr5ztkthyodygzwj2cbdika
   '@typescript-eslint/parser': 5.42.1
   confusing-browser-globals: 1.0.11
@@ -926,6 +928,10 @@ packages:
     dependencies:
       defer-to-connect: 1.1.3
     dev: true
+
+  /@tanstack/eslint-plugin-query/4.20.2:
+    resolution: {integrity: sha512-HF/X1VV5aa6DzvqhvmtMyPFg7vky6CpZwAMBDREaEEidqVGQ8GXCF0Sm16K6fkHJo5k1RvfPLAj3ibJhbfMLyQ==}
+    dev: false
 
   /@tootallnate/once/2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
