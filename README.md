@@ -40,7 +40,7 @@ module.exports = {
     "nirtamir2/compat",
     "nirtamir2/jest",
     "nirtamir2/storybook",
-    "nirtamir2/i18n",
+    "nirtamir2/i18n", // It's also recommanded to use https://github.com/natura-cosmeticos/eslint-plugin-i18n-checker
     "nirtamir2/next", // should be after recommended react and typescript
   ],
 };
