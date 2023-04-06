@@ -163,9 +163,26 @@ module.exports = {
     "@typescript-eslint/semi": "off",
     "space-before-function-paren": "off",
     "@typescript-eslint/space-before-function-paren": "off",
+    "block-spacing": "off",
+    "@typescript-eslint/block-spacing": "off",
+    "key-spacing": "off",
+    "@typescript-eslint/key-spacing": "off",
+    "lines-around-comment": "off",
+    "@typescript-eslint/lines-around-comment": "off",
+    "space-before-blocks": "off",
+    "@typescript-eslint/space-before-blocks": "off",
     //#endregion
 
     //#region @typescript-eslint all https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/src/configs/all.ts
+
+    "@typescript-eslint/consistent-generic-constructors": "error",
+    "@typescript-eslint/no-unsafe-declaration-merging": "error",
+    // "@typescript-eslint/no-unsafe-enum-comparison": "error", new rule
+    "@typescript-eslint/sort-type-constituents": "error", // Style - too strict
+    "@typescript-eslint/no-duplicate-type-constituents": "error",
+    "@typescript-eslint/no-mixed-enums": "error",
+    "@typescript-eslint/no-import-type-side-effects": "error",
+    "@typescript-eslint/no-redundant-type-constituents": "error",
     "@typescript-eslint/no-duplicate-enum-values": "error",
     "@typescript-eslint/no-useless-empty-export": "error",
     "@typescript-eslint/ban-ts-comment": [
