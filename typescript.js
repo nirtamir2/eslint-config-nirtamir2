@@ -178,7 +178,7 @@ module.exports = {
     "@typescript-eslint/consistent-generic-constructors": "error",
     "@typescript-eslint/no-unsafe-declaration-merging": "error",
     // "@typescript-eslint/no-unsafe-enum-comparison": "error", new rule
-    "@typescript-eslint/sort-type-constituents": "error", // Style - too strict
+    "@typescript-eslint/sort-type-constituents": "off", // Style - too strict
     "@typescript-eslint/no-duplicate-type-constituents": "error",
     "@typescript-eslint/no-mixed-enums": "error",
     "@typescript-eslint/no-import-type-side-effects": "error",
