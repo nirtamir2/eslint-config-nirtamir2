@@ -4,6 +4,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended", // should not add new rules
     "plugin:@typescript-eslint/recommended-requiring-type-checking", // should not add new rules
     "plugin:etc/recommended", // should not add new rules
+    "plugin:import/recommended",
     "plugin:import/typescript",
     "prettier",
   ],
@@ -17,7 +18,11 @@ module.exports = {
       jsx: true,
     },
   },
-
+  settings: {
+    "import/resolver":{
+      typescript: {}
+    }
+  },
   rules: {
     //#region tsdoc
     "tsdoc/syntax": "warn",
@@ -180,7 +185,6 @@ module.exports = {
     "@typescript-eslint/no-unsafe-declaration-merging": "error",
     // "@typescript-eslint/no-unsafe-enum-comparison": "error", new rule
     "@typescript-eslint/sort-type-constituents": "off", // Style - too strict
-    "@typescript-eslint/no-duplicate-type-constituents": "error",
     "@typescript-eslint/no-mixed-enums": "error",
     "@typescript-eslint/no-import-type-side-effects": "error",
     "@typescript-eslint/no-redundant-type-constituents": "error",
@@ -339,7 +343,6 @@ module.exports = {
     "@typescript-eslint/restrict-template-expressions": "error",
     "no-return-await": "off",
     "@typescript-eslint/return-await": ["error", "always"],
-    "@typescript-eslint/sort-type-union-intersection-members": "error", // maybe too strict and we need to change to "@typescript-eslint/sort-type-union-intersection-members": ["error", {checkIntersections: false, checkUnions: false}]
     "@typescript-eslint/strict-boolean-expressions": "error",
     "@typescript-eslint/switch-exhaustiveness-check": "error",
     "@typescript-eslint/triple-slash-reference": "error",
