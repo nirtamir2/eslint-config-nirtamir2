@@ -93,18 +93,17 @@ If you have problems with the import resolution try
 pnpm add -D prettier prettier-plugin-tailwindcss @trivago/prettier-plugin-sort-imports prettier-plugin-packagejson
 ```
 
-Edit your `.prettierrc.js` file
+Edit your `.prettierrc.mjs` file
 
 ```js
-module.exports = {
+export default {
   plugins: [
-    require.resolve("prettier-plugin-packagejson"),
-    require.resolve("@trivago/prettier-plugin-sort-imports"),
-    require.resolve("prettier-plugin-tailwindcss"), // must come last
+    "prettier-plugin-packagejson",
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss" // must come last
   ],
-  pluginSearchDirs: false, // for prettier-plugin-tailwindcss to work with other plugins
   // @see https://github.com/tailwindlabs/prettier-plugin-tailwindcss#resolving-your-tailwind-configuration
-  tailwindConfig: "./tailwind.config.cjs",
+  tailwindConfig: "./tailwind.config.ts",
   // @see https://github.com/trivago/prettier-plugin-sort-imports
   importOrder: [
     "^react$",
@@ -126,6 +125,7 @@ module.exports = {
     },
   ],
 };
+;
 ```
 
 ## Husky
