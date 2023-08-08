@@ -24,7 +24,7 @@ module.exports = {
   plugins: [
     "sort-keys-fix" /* not in use but can be */,
     "github", // added all the rules manually
-    "@annangela/eslint-plugin"
+    "@annangela/eslint-plugin-prefer-reflect"
   ],
   rules: {
     //#region sort-keys-fix
