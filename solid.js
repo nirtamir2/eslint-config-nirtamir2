@@ -115,7 +115,6 @@ module.exports = {
         reservedFirst: true,
       },
     ],
-    "react/jsx-space-before-closing": "off", // prettier
     "react/jsx-tag-spacing": "off", // prettier
     "react/jsx-uses-react": "off",
     "react/jsx-uses-vars": "error",

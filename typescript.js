@@ -59,6 +59,7 @@ module.exports = {
     "@typescript-eslint/no-magic-numbers": "off",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": "off",
+    "@typescript-eslint/class-methods-use-this": "off",
     "@typescript-eslint/consistent-type-definitions": "off", // I think it's covered by etc/prefer-interface + I prefer interface than type
     "@typescript-eslint/explicit-module-boundary-types": "off", // nice, but may need to off in tsx files? https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md#configuring-in-a-mixed-jsts-codebase
     "@typescript-eslint/explicit-function-return-type": "off", //too strict
@@ -294,7 +295,7 @@ module.exports = {
     "@typescript-eslint/no-this-alias": "error",
     "no-throw-literal": "off",
     "@typescript-eslint/no-throw-literal": "error",
-    "@typescript-eslint/no-type-alias": "off", // A & B, type AppRouter = typeof appRouter, Merge<A,B>
+    // "@typescript-eslint/no-type-alias": "off", // A & B, type AppRouter = typeof appRouter, Merge<A,B>
     "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
     "@typescript-eslint/no-unnecessary-condition": "error",
     "@typescript-eslint/no-unnecessary-qualifier": "error",
