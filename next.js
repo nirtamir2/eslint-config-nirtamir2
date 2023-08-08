@@ -1,21 +1,21 @@
 module.exports = {
   extends: ["next/core-web-vitals"],
   overrides: [
-    // @see https://github.com/vercel/next.js/blob/canary/packages/eslint-config-next/index.js
     {
-      files: ["**/*.ts?(x)"],
-      parser: "@typescript-eslint/parser",
-      parserOptions: {
-        sourceType: "module",
-        ecmaFeatures: {
-          jsx: true,
-        },
-        warnOnUnsupportedTypeScriptVersion: true,
+      files: "static-paths.d.ts",
+      rules: {
+        "eslint-comments/disable-enable-pair": "off",
+        "eslint-comments/no-unlimited-disable": "off",
+        "unicorn/no-abusive-eslint-disable": "off",
       },
     },
     {
-      // Next.js Pages
-      files: ["**/pages/**/*.ts?(x)"],
+      // Next.js App directory & pages
+      files: [
+        "**/pages/**/*.ts?(x)",
+        "**/src/app/**/*.tsx",
+        "**/src/middleware.ts",
+      ],
       rules: {
         "import/no-unused-modules": "off",
         "import/no-default-export": "off",

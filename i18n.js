@@ -1,6 +1,8 @@
 const path = require("node:path");
 
 module.exports = {
+  // When using it - we need to specify that and wrap with override
+  // files: ["**/locales/**/*.json"],
   extends: ["plugin:i18n-json/recommended"],
   rules: {
     "i18n-json/valid-message-syntax": [
