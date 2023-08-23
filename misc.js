@@ -5,7 +5,27 @@ module.exports = {
     "misc/comment-spacing": 0,
     "misc/consistent-empty-lines": 0,
     "misc/consistent-enum-members": 2,
-    "misc/consistent-filename": 2, // config?
+    "misc/consistent-filename": [
+      2,
+      {
+        overrides: [
+          {
+            _id: "utils",
+            format: "camelCase",
+            filesToLint: ["**.ts"],
+            match: false,
+            selector: [],
+          },
+          {
+            _id: "components",
+            format: "PascalCase",
+            filesToLint: ["**.tsx"],
+            match: false,
+            selector: [],
+          },
+        ],
+      },
+    ], // config?
     "misc/consistent-import": 2, // config + too strict?
     "misc/consistent-optional-props": 0,
     "misc/consistent-source-extension": 0,
