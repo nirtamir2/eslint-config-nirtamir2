@@ -21,7 +21,8 @@
     "i18n.js",
     "_i18next-syntax-validator.js",
     "next.js",
-    "query.js"
+    "query.js",
+    "tailwindcss.js"
   ],
   "scripts": {
     "format": "prettier --write **/*.{js,ts,md}",
@@ -83,6 +84,7 @@
     "@commitlint/config-conventional": "^17.7.0",
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",
     "@types/node": "^20.5.3",
+    "eslint-plugin-tailwindcss": "^3.13.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "prettier": "^3.0.2",
