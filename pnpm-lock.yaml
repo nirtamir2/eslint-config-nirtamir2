@@ -8,6 +8,9 @@ dependencies:
   '@annangela/eslint-plugin-prefer-reflect':
     specifier: ^2.0.1
     version: 2.0.1(eslint@8.46.0)
+  '@naturacosmeticos/eslint-plugin-i18n-checker':
+    specifier: ^1.0.1
+    version: 1.0.1
   '@rushstack/eslint-patch':
     specifier: ^1.3.3
     version: 1.3.3
@@ -53,9 +56,18 @@ dependencies:
   eslint-plugin-github:
     specifier: ^4.9.2
     version: 4.9.2(eslint@8.46.0)(typescript@5.1.6)
+  eslint-plugin-i18n-checker:
+    specifier: ^1.4.0
+    version: 1.4.0(eslint@8.46.0)
   eslint-plugin-i18n-json:
     specifier: ^4.0.0
     version: 4.0.0(eslint@8.46.0)
+  eslint-plugin-i18n-prefix:
+    specifier: ^0.0.6
+    version: 0.0.6(eslint@8.46.0)
+  eslint-plugin-i18next:
+    specifier: ^6.0.3
+    version: 6.0.3
   eslint-plugin-import:
     specifier: ^2.28.0
     version: 2.28.0(@typescript-eslint/parser@6.3.0)(eslint-import-resolver-typescript@3.5.5)(eslint@8.46.0)
@@ -630,6 +642,12 @@ packages:
 
   /@microsoft/tsdoc@0.14.2:
     resolution: {integrity: sha512-9b8mPpKrfeGRuhFH5iO1iwCLeIIsV6+H1sRfxbkoGXIyQE2BTsPd9zqSqQJ+pv5sJ/hT5M1zvOFL02MnEezFug==}
+    dev: false
+
+  /@naturacosmeticos/eslint-plugin-i18n-checker@1.0.1:
+    resolution: {integrity: sha512-2HhWTfMQ1jQTy12uXjqoX7XNEbiQpbMfCUj3dyG78GHamjGkb7cZG1yQvsahverIJmfp9fjGzXRo/u/QXSGvuA==}
+    dependencies:
+      lodash: 4.17.21
     dev: false
 
   /@next/eslint-plugin-next@13.4.13:
@@ -3016,6 +3034,10 @@ packages:
       is-obj: 2.0.0
     dev: true
 
+  /dotty@0.1.2:
+    resolution: {integrity: sha512-V0EWmKeH3DEhMwAZ+8ZB2Ao4OK6p++Z0hsDtZq3N0+0ZMVqkzrcEGROvOnZpLnvBg5PTNG23JEDLAm64gPaotQ==}
+    dev: false
+
   /duplexer2@0.1.4:
     resolution: {integrity: sha512-asLFVfWWtJ90ZyOUHMqk7/S2w2guQKxUI2itj3d92ADHhxUSbCMGi1f1cBcJ7xM1To+pE/Khbwo1yuNbMEPKeA==}
     dependencies:
@@ -3500,6 +3522,16 @@ packages:
       - typescript
     dev: false
 
+  /eslint-plugin-i18n-checker@1.4.0(eslint@8.46.0):
+    resolution: {integrity: sha512-ZTiYYAJEQa6Y3/X/x/i0RCACZ+nMvBmNbTFXoF7KtJFi9R1nT2Ih2WbaxgilDXgeJMifN8Jvlq6OrklZz6Z7mw==}
+    engines: {node: 12.x || 14.x || >= 16}
+    peerDependencies:
+      eslint: '>=6'
+    dependencies:
+      dotty: 0.1.2
+      eslint: 8.46.0
+    dev: false
+
   /eslint-plugin-i18n-json@4.0.0(eslint@8.46.0):
     resolution: {integrity: sha512-rglbr9f/UaPN/OeiSLVVFlIh4RrXPTzX5qr4tqOdTj1Ryr8xIhUzriDDuyuPWliektO86c/zy1RldmBIOfDNsQ==}
     engines: {node: '>=6.0.0'}
@@ -3521,12 +3553,28 @@ packages:
       pretty-format: 22.4.3
     dev: false
 
+  /eslint-plugin-i18n-prefix@0.0.6(eslint@8.46.0):
+    resolution: {integrity: sha512-xbFsktYSPgA7WTaTmRpLO+0Z1ldoGbpHHKFbk0i9fmFgzscNpefsIg17XuRLbQkvtMc5W63CTRM+UTjBZ4AdGQ==}
+    peerDependencies:
+      eslint: ^4 || ^5 || ^6 || ^7 || ^8
+    dependencies:
+      eslint: 8.46.0
+    dev: false
+
   /eslint-plugin-i18n-text@1.0.1(eslint@8.46.0):
     resolution: {integrity: sha512-3G3UetST6rdqhqW9SfcfzNYMpQXS7wNkJvp6dsXnjzGiku6Iu5hl3B0kmk6lIcFPwYjhQIY+tXVRtK9TlGT7RA==}
     peerDependencies:
       eslint: '>=5.0.0'
     dependencies:
       eslint: 8.46.0
+    dev: false
+
+  /eslint-plugin-i18next@6.0.3:
+    resolution: {integrity: sha512-RtQXYfg6PZCjejIQ/YG+dUj/x15jPhufJ9hUDGH0kCpJ6CkVMAWOQ9exU1CrbPmzeykxLjrXkjAaOZF/V7+DOA==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      lodash: 4.17.21
+      requireindex: 1.1.0
     dev: false
 
   /eslint-plugin-import@2.28.0(@typescript-eslint/parser@6.3.0)(eslint-import-resolver-typescript@3.5.5)(eslint@8.46.0):
