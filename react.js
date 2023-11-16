@@ -6,6 +6,7 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:import/react",
     "plugin:jsx-a11y/recommended",
+    "plugin:clsx/recommended",
   ],
   settings: {
     react: {

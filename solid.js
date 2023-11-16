@@ -3,6 +3,7 @@ module.exports = {
     "plugin:ssr-friendly/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:solid/typescript",
+    "plugin:clsx/recommended",
   ],
   plugins: ["react"],
   settings: {
