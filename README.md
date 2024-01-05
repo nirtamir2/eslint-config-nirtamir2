@@ -11,7 +11,7 @@ Edit your `package.json` file
 ```json
 {
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=20.0.0"
   },
   "browserslist": {
     "production": [">0.2%", "not dead", "not op_mini all"],
