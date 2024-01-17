@@ -3,7 +3,7 @@ module.exports = {
     "plugin:expect-type/recommended",
     "plugin:@typescript-eslint/recommended", // should not add new rules
     "plugin:@typescript-eslint/recommended-requiring-type-checking", // should not add new rules
-    "plugin:etc/recommended", // should not add new rules
+    // "plugin:etc/recommended", // should not add new rules UPDATE: does not work
     "plugin:import/recommended",
     "plugin:import/typescript",
     "prettier",
@@ -40,23 +40,23 @@ module.exports = {
     //#endregion
 
     //#region etc - off too strict rules
-    "etc/no-commented-out-code": "off", //too strict?
-    "etc/no-deprecated": "off",
-    "etc/no-enum": "off",
-    "etc/no-foreach": "off",
-    "etc/no-internal": "off",
-    "etc/prefer-less-than": "off", // conflicts unicorn/explicit-length-check
-    "etc/no-t": "off", // in the future
+    // "etc/no-commented-out-code": "off", //too strict?
+    // "etc/no-deprecated": "off",
+    // "etc/no-enum": "off",
+    // "etc/no-foreach": "off",
+    // "etc/no-internal": "off",
+    // "etc/prefer-less-than": "off", // conflicts unicorn/explicit-length-check
+    // "etc/no-t": "off", // in the future
     //#endregion
 
     //#region etc - error rules
-    "etc/no-assign-mutated-array": "error",
-    "etc/no-const-enum": "error",
-    "etc/no-misused-generics": "error",
-    "etc/prefer-interface": "error",
-    "etc/throw-error": "error",
-    "etc/underscore-internal": "error",
-    "etc/no-implicit-any-catch": "error",
+    // "etc/no-assign-mutated-array": "error",
+    // "etc/no-const-enum": "error",
+    // "etc/no-misused-generics": "error",
+    // "etc/prefer-interface": "error",
+    // "etc/throw-error": "error",
+    // "etc/underscore-internal": "error",
+    // "etc/no-implicit-any-catch": "error",
     //#endregion
 
     //#region @typescript-eslint off - too strict
