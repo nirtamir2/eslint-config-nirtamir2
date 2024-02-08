@@ -84,7 +84,7 @@ dependencies:
     specifier: ^48.0.6
     version: 48.0.6(eslint@8.56.0)
   eslint-plugin-jsx-a11y:
-    specifier: ^6.8.0
+    specifier: ^6.7.1
     version: 6.8.0(eslint@8.56.0)
   eslint-plugin-markdown:
     specifier: ^3.0.1
