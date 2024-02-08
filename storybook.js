@@ -4,7 +4,7 @@ module.exports = {
     "plugin:storybook/csf-strict",
     "plugin:storybook/addon-interactions",
   ],
-  override: [
+  overrides: [
     {
       // Storybook stories
       files: ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
