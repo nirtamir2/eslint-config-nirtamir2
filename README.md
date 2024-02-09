@@ -102,7 +102,7 @@ export default {
   plugins: [
     "prettier-plugin-packagejson",
     "@trivago/prettier-plugin-sort-imports",
-    "prettier-plugin-tailwindcss" // must come last
+    "prettier-plugin-tailwindcss", // must come last
   ],
   // @see https://github.com/tailwindlabs/prettier-plugin-tailwindcss#resolving-your-tailwind-configuration
   tailwindConfig: "./tailwind.config.ts",
@@ -127,7 +127,6 @@ export default {
     },
   ],
 };
-;
 ```
 
 ## Husky
@@ -175,6 +174,35 @@ In `tsconfig.json` add to the top
 
 ## Release / Publish
 
+Create release
+
 ```bash
-pnpm publish
+changeset
 ```
+
+Bump version
+
+```bash
+changeset version
+```
+
+Publish to pnpm
+
+```bash
+changeset publish
+```
+
+### Notes
+
+> [!WARN] Maintaining
+> When you upgrade deps - notice that you need to use the same Next.js versions numbers for dependencies in https://github.com/vercel/next.js/blob/v14.1.0/packages/eslint-config-next/package.json.
+> If you want to upgrade `eslint-config-next` - you need to use the matching version numbers.
+
+> [!NOTE]
+> You can `run pnpm` to test it, and connect it to existing repository by using
+>
+> ```json
+> {
+>   "eslint-config-nirtamir2": "file:./eslint-config-nirtamir2-0.0.63.tgz"
+> }
+> ```
