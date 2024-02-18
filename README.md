@@ -43,6 +43,7 @@ module.exports = {
     "nirtamir2/i18n",
     "nirtamir2/query",
     "nirtamir2/tailwindcss",
+    "nirtamir2/astro",
     "nirtamir2/next", // should be after recommended react and typescript
   ],
 };

@@ -1,5 +1,11 @@
 # eslint-config-nirtamir2
 
+## 0.0.65
+
+### Patch Changes
+
+- add astro
+
 ## 0.0.64
 
 ### Patch Changes
