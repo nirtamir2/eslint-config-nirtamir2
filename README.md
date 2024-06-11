@@ -1,5 +1,9 @@
 # eslint-config-nirtamir2
 
+My ESLint config till ESLint v9.
+Notice: compatible with ESLint <= v8.
+For ESLint v9+ flat config you may want to use [@nirtamir2/eslint-config](https://github.com/nirtamir2/eslint-config)
+
 ## Installation
 
 ```bash
